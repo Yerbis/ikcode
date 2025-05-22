@@ -1,0 +1,2 @@
+6:10 : "A variable behaves as if it was the value it contains"
+

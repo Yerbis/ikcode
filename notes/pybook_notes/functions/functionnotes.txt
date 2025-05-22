@@ -1,0 +1,15 @@
+1. A function is structured like this: 'def function(a, b):
+    'def' defines that the following block is a function
+    the word 'function' can be replaced by any word you want, this is the name for the function
+    the (a, b) is the variables that will go into the function and be called later
+
+2. Misc - methods
+    1. Doctrings:
+        Docstrings are used to document a functions purpose. They are formatted like this:
+            """docstring"""
+    
+    2. It is best to create a module that contains a single, canonical copy of any functions you want
+    to share.
+        2.1. A module is any file that contains functions.
+    
+    

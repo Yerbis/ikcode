@@ -1,0 +1,35 @@
+pg 326: "any arguements provided to the class are passed to the __init__ method"
+
+pg 338: "If your class defines dunder 'enter' and 'exit', it's a context manager."
+
+pg 364: "Every web request is independent of what came before it, as well as what comes
+            after it"
+
+pg 390: "Think of * as meaning "expand to a list of values."
+
+pg 424: "Note that it's not enough to catch runtime errors, you also have to decide
+            what you are going to do next"
+
+pg 471: "The decorator, copy_current_request_context, ensures that the HTTP request that is
+            active when a function is called remains active even when the function is
+            subsequently excecuted in a thread"
+
+pg 509: 
+        "When you come across something that looks like a listcomp but is surrounded by 
+            parentheses, you're looking at a GENERATOR"
+        
+        "A generator can  be used anywhere a listcomp is used, and produces the same 
+            results"
+        
+        "When a listcomp excutes, it produces all of it's data prior to any other
+            processing occuring"
+        
+        "A listcomp that takes a long time to produce data delays any other
+            code from running until the listcomp concludes"
+        
+        "A generator releases data as soon as the data is produced by the generator's code"
+
+pg 511: "the listcomp waits for all of its data to be produced before feeding any data to 
+            the waiting for loop, whereas the generator releases data as soon as it becomes
+            available. This means the for loop that uses the generator is much more 
+            responsive, as opposed to the listcomp(which makes you wait)."

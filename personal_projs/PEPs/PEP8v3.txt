@@ -1,0 +1,36 @@
+PEP 8 V.3
+
+
+PEP 8 v1: included full document
+PEP 8 v2: Included just a link to peps
+PEP 8 v3: Includes link to peps and short PEP 8 Summary
+
+
+https://www.python.org/dev/peps/.
+
+
+PEP 8 Summary:
+
+
+PEP 8 is Python’s **style guide** for writing clean and readable code.  
+
+### **Key Guidelines:**  
+
+1. **Indentation:** Use **4 spaces** per level (no tabs).  
+2. **Line Length:** Max **79 characters** (72 for comments).  
+3. **Imports:** Standard library → Third-party → Local modules.  
+4. **Naming:**  
+   - Variables/Functions: `lower_case_with_underscores`  
+   - Classes: `CamelCase`  
+   - Constants: `ALL_CAPS`  
+5. **Whitespace:**  
+   - One space around operators (`a = b + c`).  
+   - No extra spaces inside brackets (`spam(ham[1])`).  
+6. **Comments:** Use `#` for inline, `"""Triple quotes"""` for docstrings.  
+7. **Best Practices:**  
+   - Use `is` for `None` (`if x is None`).  
+   - Avoid `import *`.  
+   - Use `with` for file handling.  
+
+Following PEP 8 improves code **readability and consistency**. 
+You can check compliance using `pycodestyle`.

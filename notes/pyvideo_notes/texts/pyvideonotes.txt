@@ -1,0 +1,3465 @@
+The following data is in order with the video (Pyvideo)
+
+Check out the video: https://youtu.be/ix9cRaBkVe0?si=ErSOAj5HDI0B4kMl
+
+The following was made by IKcode
+
+Sponsored by Froog Caterings
+
+Theme: Frogs
+
+IKcode website: https://ikcodeii.pythonanywhere.com
+
+1. Basics
+
+    1. Print statement: print out a variable or string
+                Example:  print(CONTENTS)
+        
+        1. F strings: Better for putting variables in strings
+            Example: print(f"Hello{variable}")
+
+    2. Variables: A container for value (string, integer,
+                                        float, boolean)
+                Example: example = "Showing you an example"
+    
+    3. Typecasting
+
+        Typecasting is the process of converting a variable 
+        from one data type to another
+
+        See what type of data type you have by typing this:
+
+            type(INSERT_VARIABLE_HERE)
+
+        Example: name = "Yog Forg"
+                
+               :  type(name)
+
+            Output: <class 'str'>
+
+    4. Math
+
+        1. Symbols:
+        
+        + = add
+        - = subtract
+        * = multiply 
+        / = divide
+
+        2. Ogmented symbols
+        If you want to add a number to a 'int' variable,
+        you might do this:
+
+            variable = variable + 1
+
+        But to make that code shorter, you can do this
+
+            variable += 1
+        or (for subtracting)
+            variable -= 1
+        
+        You could also do this for multiplying:
+
+            variable *= 2
+
+        And for division:
+
+            variable /= 2
+
+        Theres also 
+
+            max(tells you the biggest thing)
+            min(Tells you the smallest thing)
+
+        round() lets you.. round a number.
+
+        example: x = 3.14
+                round(x)
+
+                result = 3.00
+
+        abs() finds the absolute value
+
+            example:
+
+            y = -5
+
+
+
+            result = abs(y)
+
+
+            print(result)
+
+        sqrt() Finds the square root of a number
+                example:
+
+                x = 9
+                res = math.sqrt(x)
+        ceil() rounds to the highest number
+                example:
+
+                9.1 will be 10
+                8.3 will be 9
+
+        floor() does the exact opposite of ceil()
+
+        the "%" is the moduleis that can be useful to check 
+        odd / even numbers:
+
+        num = 10
+
+        if num % 2 == 0:
+            print("even")
+        else:
+            print("odd")
+        
+        ^ Simple code to check for evens / odds. May be handy 
+        later on.
+
+        3. Comparing
+
+            v1 < v2 : v1 is smaller than v2 
+            v1 > v2 : v1 is bigger than v2
+            v1 <= v2: v1 is smaller or equal to v2
+            v1 >= v2: v1 is bigger or equal to v2
+            v1 == v2: v1 is equal to v2 (double '=')
+        
+        TIP: Don't use "=" to check is something is equal,
+            because "=" assigns values to objects. Use "==", it
+            checks to see if something is equal.
+
+
+    5. Inputs
+
+        An input allows the user to type something in.
+        
+        Here's how you can implement it:
+
+            input("Enter your name: ")
+
+        Or if you want the input to be an int so you can do math 
+        on it:
+
+            number = input("Enter a number: ")
+            number = int(number)
+        Another way to make an input a 'int' is this:
+
+            number = int(input("Enter a nmumber:))
+    
+    6. If statements
+        IF statements do code IF some condition is true
+
+        There is :
+             if = the start of an if statement
+             else = something opposite to if
+             elif = another if but inside the statement
+
+            Example:
+
+                print("Sign up for IKworks software management")
+
+                age = int(input("Enter your age: "))
+
+                if age >= 18:
+                    print("You are signed up")
+                elif age < 0:
+                    print("You don't even exist yet")
+                else:
+                    print("You must be 18+ to sign up")
+
+                Let's say you want to put another elif:
+
+                elif age > 100:
+                print("TOO OLD!!)
+
+                It will still say "you are now signed up" because
+                technically the first if is still true.
+
+                To fix that, make sure to put that elif at the top,
+                (make it the base "if" statement.)
+
+                Here's what we mean:
+
+                if age > 100:
+                    print("TOO OLD!!)
+                elif age >= 18:
+                    print("You are signed up")
+                elif age < 0:
+                    print("You don't even exist yet")
+                else:
+                    print("You must be 18+ to sign up")
+    
+    7. Logical Operators
+
+        Evaluate multple conditions (or, and, not)
+
+        or = at least one condition must be true
+        and = both conditions must be true
+        not = inverts the condition (not False, not True)
+
+
+        Here's an example for -or-:
+
+            temp = 710
+
+            is_raining = False
+
+            if temp > 100 or temp < 32 or is_raining:
+                print("Event cancelled")
+            else:
+                print("Event still scheduled")
+
+            if the temp variable is higher than 100 or below 32,
+            or is_raining is true, then the following prints out:
+            "Event cancelled"
+
+            Otherwise, it prints "Event still scheduled"
+
+
+            Here's an example for -and- and -not-
+
+            temp = 71
+
+            sunny = True
+
+
+            if temp >= 70 and sunny:
+                print("Hot. sunny")
+            elif temp < 70 and not sunny:
+                print("cold. Not sunny")
+            else:
+                print("average weather")
+
+            If the temp vairable is above 70 AND sunny = True,
+            it will print "Hot. sunny"
+
+            Else If the temp is below 70 AND sunny is NOT true,
+            it prints ("cold. Not sunny")
+
+            TIP: You can link as much conditions as you want
+    
+    8. Conditional expression
+        A one-line shortcut for the if-else statement
+        (ternary operator)
+        Print or assign one of two values based on a condition.
+
+        Formula = X if conditon else y
+
+        Simple example:
+
+        num = 5
+
+        print("Positive" if num >0 else "Negative")
+
+
+        You could also assign a CE (Conditional operator) to 
+        a variable:
+
+        num = 5
+
+        result = "Even" if num % 2 == 0 else "Odd"
+
+        print(result)
+
+        TIP: Using a CE is deffinetly an easier way to use 
+        if statements if it is short.
+
+2. Strings
+    1. String methods:
+
+        1. len(): Shows you how much characters are in a string.
+
+        Let's say you do this code:
+
+        name = input("Enter your full name: ")
+
+        result = len(name)
+
+        print(result)
+
+        input = Frog 
+        result = 4
+
+
+        2. .find()
+
+        .find() lets you find the first occurance of a character 
+
+        Example:
+
+        name = input("Enter your full name: ")
+
+        result = name.find(" ")
+
+        print(result)
+
+        input = "The space"
+
+        result = 3
+
+        It tells you how many characters there until the 
+        selected character, in this case, " ". 
+
+        Q: Why does it say 3? " " is 4 characters from the start.
+
+        A: .find() uses an index platform, 
+            which means the first character
+            will be a 0. Like this:
+
+            "The space"
+             ^^^^^^^^^
+             012345678
+                ^
+            The space is at index 3. You will get to learn more
+            about indexes when talking about Lists.
+        
+        3. .rfind() does the opposite of .find().
+                It finds the last occurace of a character.
+
+            Example:
+
+                "The space"
+            
+            .find(e) will output "2"
+            .rfind(e) will output "8"
+
+            "The space"
+               ^     ^
+            First e  last e 
+
+            Q: What if I put "q", and there is no "q" in 
+                my string? Will it error?
+
+            A: No, it won't. It will return -1 if the interpreter
+                doesn't find the selected character, in this case,
+                "q".
+        
+        4. .capitalize()
+            
+            Capitalizes the first letter in a string.
+
+            Example:
+
+            name = input("Enter your full name: ")
+
+        result = name.capitalize()
+
+        print(result)
+
+        Input = the space
+        Output = The space
+
+        5. .upper()
+
+            Capitalizes all letters in a string
+
+            Example:
+
+            name = input("Enter your full name: ")
+
+            result = name.upper()
+
+            print(result)
+
+            Input = the space
+            Output = THE SPACE 
+        
+        6. .lower()
+
+            Makes the string all lowercase.
+
+            Example:
+
+            name = input("Enter your full name: ")
+
+            result = name.lower()
+
+            print(result)
+
+            Input = THe SPacE 
+            Output = the space 
+
+            TIP: This method is SUPER useful for doing things
+                like (yes/no) questions because if someone
+                types "YES" but your IF statement says 
+                answer == "Yes", it wont pick up. So at the end
+                of your input() function, put a .lower() method
+                Like this:
+
+                answer = input("Yes/No: ").lower()
+
+                if answer == "yes":
+                    print('yes')
+                else:
+                    print('no')
+                
+                So no matter how the user enters "yes", it will
+                come out as completely lowercase where you can 
+                pick it up with your if statement. Just make 
+                sure that it checks the answer to be "yes", all
+                lowercase.
+
+                The same can be done with .upper(), but .lower()
+                is more clean.
+        
+        7. .isdigit()
+
+            If the string has ONLY digits, it will return a
+            boolean, True or False.
+
+            name = input("Enter your full name: ")
+
+            result = name.isdigit()
+
+            print(result)
+
+            input = the space 2
+            output = False
+            
+            input = the space
+            output = False
+
+            input = 123
+            output = True
+        
+        8. .isalpha()
+
+            Checks the string to see if it ONLY contains
+            alphabetical characters, and return a boolean,
+            True or False.
+
+            Example:
+
+            name = input("Enter your full name: ")
+
+            result = name.isalpha()
+
+            print(result)
+
+            input = the space 2
+            output = False
+
+            input = thespace
+            output = True
+
+            input = 123
+            output = False
+
+            input = the space
+            output = False
+
+            (Yes, if the string includes a " " it will return
+            False. Because " " is NOT a alphabetical character)
+        
+        9. .count()
+
+            This checks how much of each character you specify
+            there are.
+
+            Example:
+
+            phone_num = input("Enter your phone #: )
+
+            result = phone_num.count("-")
+
+            print(result)
+
+
+            input = 971-238-2971
+            output = 2
+
+            input = 9712382971
+            output = 0
+
+        10. .replace()
+
+            Replaces a specified character with another one
+            that you specified.
+
+            Example:
+
+            name = input("Enter your full name: ")
+
+            result = name.replace(" ", "_")
+
+            print(result)
+
+            In this example, it replaces all " " with "_"
+
+            input = The space
+            output = The_space
+
+            input = thespace
+            output = thespace # It returns the same thing if 
+                                the specified character was 
+                                not found or is already there
+            input = The_space
+            output = The_space
+        
+        11. help()
+
+            If you want to see all string methods available 
+            to you, type help().
+
+            Like this:
+
+            print(help(str)) #(str) because we are doing strings,
+                            but you can do ints and floats
+                            or anything else.
+
+            We didn't cover ALL methods for strings, so you 
+            can see all of them in help(str).
+    
+    2. String indexing
+        String indexing is when you are accessing elements of a 
+        sequence using [] (indexing operator)
+        There are at most 3 fields we can fill:
+
+        [start : stop : step]
+        
+        example:
+
+        phone_num = "9712382791"
+
+        print(phone_num[0])
+
+        input is what goes in between the "[]"s
+
+        input = 0
+        output = 9
+
+        input = 4
+        output = 3
+
+        input = 0:4 # You don't have to put 0, you can just do :4
+        output = 97123 # Prints up to index 4
+
+        input = [4:9]
+        output = 2382791
+
+        input = [3:] # Prints everything after index 3
+        output = 382791
+
+        input = [-1] # Prints the last digit
+        output = 1
+
+        input = -3 # Prints the 3d last digit
+        output = 7
+
+        input = ::2 # Step. Prints every second digit
+        output = 91329
+
+        Learn more about START, STOP, STEP at
+        notes/pybook_notes/data_structures/list.notes.py
+
+        or at
+
+        notes/pybook_notes/texts/pybooknotes.txt Note # 6
+
+3. Formatting
+    Expanding more on integer logic and functions
+
+    1. Format specifiers
+        Uses {value:flags} to format a value based on what 
+        flags are inserted.
+
+        .(number)f = round to {number} decimal places (fixed point)
+        :(number) = allocate {number} spaces
+        :03 = allocate and zero pad {3} spaces
+        :< = left justify
+        :> = right justify
+        :^ =  center align
+        :+ = use a plus sign to indicate positive value (ex: +4)
+        : = insert a space before positive numbers
+        :, = comma separator (ex: 100,000)
+
+        example:
+
+        price1 = 3.8746
+        price2 = -965.76
+        price3 = 13.65
+
+        print(f"Price 1 is ${price1:.2f}")
+        print(f"Price 2 is ${price2:^10}")
+        print(f"Price 3 is {price3:+}")
+
+        Price 1 output: $3.87
+        Price 2 output: $ -965.76
+        Price 3 output: +13.65
+
+4. Loops
+
+    1. While Loops
+        Excecute some code WHILE some condition remains true
+
+        Example:
+
+            name = input("Enter your name: ")
+
+            while name == "":
+                print("No name entered")
+                name = input("Enter your name: ")
+            else:
+                print(f"Hello, {name}")
+
+        This code will repeat the input prompt unil the user
+        enters something.
+
+        TIP: Always make sure to have a "exit strategy". An exit
+            strategy is something like an input, which in this code,
+            terminates the while loop. If you dont have an exit
+            strategy, then the code will preform something called 
+            a "infinity loop", where it will go on forever.
+
+            You can also make a exit function for the user, 
+            like "press q to quit":
+
+            while not name == "q":
+                print(f"Hello, {name})
+                name = input("enter your name: )
+            
+            You can also do or:
+
+            num = int(input("Enter a number between 1 - 10: "))
+
+            while num < 1 or num > 10:
+                print(f"{num} is not within range")
+                num = int(input("Enter a number between 1 - 10: "))
+
+            print(f"Your number is {num}")
+
+            And -and- works but no example.
+    
+    2. For Loops
+
+        Excecute a block of code a fixed number of times.
+            You can iterate over a range, string, sequence, etc.
+
+        heres the basic syntax of a for loop,
+        to count from 1 to 10:
+
+            for i in range(1, 11):
+                print(i)
+
+            Notice we put 11, this is because range() uses indexs.
+
+            The output would be:
+
+            1
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+
+            You could make each number appear a number of seconds
+            like this:
+
+            for i in range(1, 11):
+                time.sleep(1)
+                print(i)
+
+            Put time.sleep(x), and replace x with the numbers of
+            seconds you want. Make sure to put -import time-
+            at the top of your code.
+
+            You can count backwards by adding reversed() to your 
+            loop:
+
+            for i in reversed(range(1, 11))
+
+            so it would go 
+
+            10
+            9
+            8
+            7
+            6
+            5
+            4
+            3
+            2
+            1
+
+            The range() kind of uses the START, STOP, STEP methods.
+
+            range(1, 11,   2)
+                  ^   ^    ^
+                Start Stop Step
+
+            The step is where you can put how the interpreter will
+            count, in this case:
+
+            range(1, 11, 2)
+
+            It counts from 1 to 10 by 2's, so the output would be:
+
+            1
+            3
+            5
+            7
+            9
+
+            (It starts at 1 unless you put 0 as the start)
+
+            Here's a small code using a for loop:
+
+            credit_card = "1234-56789-101234"
+
+            for i in credit_card:
+                print(i)
+
+            output:
+
+            1
+            2
+            3
+            4
+            -
+            5
+            6
+            7
+            8
+            9
+            -
+            1
+            0
+            1
+            2
+            3
+            4
+
+           You can also skip over an iteration,
+           like this example:
+
+
+           for i in range(1, 21):
+                if i == 13:
+                    continue
+                else:
+                print(i)
+
+
+            This will skip the number 13, so it won't print. 
+
+    3. Nested Loops
+        
+        A loop within another loop(outer, inner)
+
+        Structure:
+
+        outer loop:
+            inner loop
+
+        =============================================
+
+        Example:
+            for l in range(3):
+                for i in range (1, 11):
+                    print(i, end=" ")   # End will put something in
+                                            between iterations.
+                                            If you put " ", it 
+                                            would look like this:
+                print()                            1 2 3 4 5 6 7 8 9 10  
+
+        The loop that counts from 1 to 10 is looped 3 times,
+        because it is under the other loop that loops 3 times.
+
+        The empty print() will just make new lines, nothing important
+        
+        TIP: Both loops cannot have the same variable.
+
+        for i in range(3)
+            ^
+          Variable
+
+        output:
+
+        12345678910
+        12345678910
+        12345678910
+
+5. Data Structures
+
+    A method used to store data
+
+    1. Basics
+         There are 4 known data types, lists, sets, tuples, and
+         dictionaries.
+
+         We will focus on lists, sets, tuples, and collections.
+         for this one.
+
+         collection = single "variable" used to store multiple values
+
+         List = [] ordered and changeable. Duplicates OK
+         Set = {} unordered and immutable, NO Duplicates
+         Tuple = () ordered and unchangeable. Duplicates OK. FASTER
+
+            1. List Basics
+
+                List Example:
+
+                fruits = ["apple", "orange", "banana"]
+
+                print(fruits)
+
+                Lists use indexs, so you can do START, STOP, STEP.
+
+                Example:
+
+                    fruits(:3)
+
+                    output: apple, orange, banana
+
+                    fruits(0:3:2)
+
+                    output: apple, banana
+
+                    and so on.
+
+                You can also use for loops for Lists:
+
+                    for fruit in fruits:
+                        print(fruit)
+
+                'fruit' would be 'i', like we usually do but when 
+                working with lists, most people like naming it
+                the singular version of the list name, in this case,
+                fruit. It isn't mandatory though, and just a common
+                practice. 
+
+                There are a ton of actions you can do with lists, 
+                and to check most of them out go to
+
+                notes/pybook_notes/data_structures/list.notes.py
+
+
+                Or you could do 
+
+                print(help(LIST NAME))
+
+                To see every action and description of them.
+
+                You can use the 'in' operator to see if a value
+                is in a list:
+
+                print("apple" in fruits)
+
+                output = True
+
+                print("Pineapple" in fruits):
+                
+                output = False
+
+
+                Changes are available, so we can change a variable:
+
+                fruits[0] = "NOT apple"
+                    ^
+                    Replace this with
+                    the index of the
+                    object you want to 
+                    switch out, in this
+                    case, apple.
+                
+                output = NOT apple, orange, banana
+
+                .append is probably the most used method for lists,
+                so this is how you can use them:
+
+                fruits.append("Grapes")
+                ^               ^
+                List name       New value you want to add
+
+                output = NOT apple, orange, banana, Grapes
+                
+                The new value will automatically go to the end of the 
+                list
+
+                You can also remove any value:
+
+                fruits.remove("orange")
+                ^               ^
+                List name       Value you want to remove
+
+                If you put a value that doesn't exist, it will error.
+
+                output = NOT apple, banana, Grapes
+
+                Remember .append() and how you couldn't put the 
+                new value at a specified index, it would just go 
+                automatically to the end? Well, there is insert(),
+                Which can insert the new value at a given index:
+
+                fruits.insert(2, "Pineapple")
+                ^           ^       ^
+                List name   Index   Value
+
+                output = NOT apple, banana, Pineapple, Grapes
+
+                NOTE that this doesn't replace a value that is already
+                at that index, it just puts it at the index and moves
+                the current value up one.
+
+                You can do .sort() to sort the list in alphabetical
+                order:
+
+                fruits.sort()
+
+                output = banana, Grapes, NOT apple, Pineapple
+
+
+                you can do .reverse() to reverse the order of the list:
+
+                fruits.reverse()
+
+                output = Grapes, Pineapple, banana, NOT apple
+
+                NOTE that this reverses the order of the list in indexs,
+                not the alphabetical order you may have done with .sort().
+                You can though just by doing this:
+
+                fruits.sort()
+                fruits.reverse()
+
+                ============================================
+
+                To clear a list, use the .clear() method:
+
+                fruits.clear()
+
+                output = []
+
+                It will remove everything in the list.
+
+                You can return the index of a value with .index()
+
+                print(fruits.index("NOT apple"))
+
+                NOTE you have to print this one to SHOW the index.
+
+                output = 0
+
+                (this output is without the reverse or sort methods)
+
+                You can count how many values of a specific one there 
+                are with .count():
+
+                print(fruits.count("banana"))
+
+                output = 1
+
+            2. Set introductions
+
+                Surround your values with {}
+
+                The values are UNORDERED and NO Duplicates
+
+                check out 
+                
+                notes/pybook_notes/data_structures/set.notes.py
+
+                for full info or type and run:
+
+                print(help(SET NAME))
+
+                You can't change values of a set, but you can add, 
+                remove, and copy values. 
+
+            3. Tuple introductions
+                
+                You can't change the values in a tuple. so there's
+                no add or remove.
+
+                Tuples are faster than lists, so they are good for
+                speedy code.
+
+                If you are making a list that you aren't planning to
+                change, it's best to use a tuple, since its faster.
+
+                There are only 2 methods you can use for tuples:
+
+                SET NAME.index("value")
+                SET NAME.count("value")
+    
+    2. More collections
+
+        1. 2D collections
+
+            1. 2D list
+                A 2D List is a list made up of lists.
+
+                Example:
+
+                fruits = ["apple", "orange", "banana"]
+                vegetables = ["potatoes", "celery", "onions"]
+                meats = ["beef", "chicken", "fish"]
+
+                foods = [fruits, vegetables, meats]
+
+
+                The "foods" list is just like a normal list but the
+                values are lists. That's all you have to do. 
+
+                If you want to print the index of foods, it would show
+                the list at the index:
+
+                print(foods[0])
+
+                output = [apple, orange, banana]
+
+                You can show an indivdual value from one of the lists
+                like this:
+
+                print(foods[0][0])
+
+                output = 'apple'
+
+                In foods, you can replace the names of the lists
+                with the actual list:
+
+                foods = [['apple', 'orange', 'banana'],
+                        ['potatoes', 'carrots', 'onions'],
+                        ['beef', 'chicken', 'fish']
+                ]
+
+                But obviously it isn't as clean or simple as putting
+                the list name in the list.
+
+            You could make a 2D tuple, made up of tuples, and 
+            a 2D sets, that is made up of sets.
+
+            Just make sure you make the 2d tuples and sets with 
+            it's formats, like for tuples, surround your tuple with
+            "()", and for sets surround it with "{}"
+
+            You can make a 2D tuple, list, or set made up of sets,
+            tuples, or lists.
+
+            2D list of lists:
+
+            twodlist = [["the", "idiot","here"],
+                        ["not", "an", "idiot"]]
+            
+            2D tuple of tuples:
+
+            twodtuple = (("im", "an", "idiot",
+                        ("Just", "kidding")))
+
+            2D set of sets:
+            
+            twodset = {{"i". "am", "cool"},
+                      {"seriously", "though"}}
+
+    2. Dictionaries
+
+        A collection of {key:value} pairs ordered and changeable.
+        No duplicates. 
+
+            Example:
+
+                capitals = {"USA": "Washington DC",
+                            "China": "Beijing",
+                            "Frog.": "Frogston}
+
+            You can print help(DICTIONARY NAME) to see all actions
+            you can do.
+
+            To get a value do the .get(): (make sure to print)
+
+                capitals.get("USA")
+
+                output = "Washington DC"
+
+            .update() can update a dictionary:
+
+                capitals.update({"Russia": "Moscow"})
+            
+            and it can update an existing key/value pair:
+
+                capitals.update({"USA": "BigBurger"})
+            
+            To remove a key/value pair, use the .pop() method:
+
+                capitals.pop({"China"})
+            
+            Or to remove the most recent pair, which in this case
+            is Russia: Moscow
+
+                capitals.popitem()
+            
+            And we have .clear(). A classic:
+
+                capitals.clear()
+
+                output = 
+            
+            To get all of the keys of the dictionary, but not the
+            value, you can use:
+
+                capitals.keys()
+            
+                (Reccomended to assign to variable)
+            
+            And you can do the same for values:
+
+                capitals.values()
+            
+            Then there's the .items() method, it returns a dictionary
+            object which resembles a 2D list of tuples:
+
+                capitals.items()
+            
+            That's all for this one, remember, if you want to 
+            learn more about them do:
+
+            print(help(DICTIONARY NAME))
+
+            # Replace DICTIONARY NAME with the name of your dictionary.
+
+6. Imported methods
+
+    1. random
+
+        random.randint(): picks random number between specifed range
+        random.random(): picks random number between 0-1
+        random.choice(): picks random item froma  collection
+        random.shuffle(): shuffles a collection and prints it in a 
+                            random order.
+
+7. Functions
+    A function is like a block of reuseable code
+        Place () after the function name to invoke it
+
+    Example:
+
+        def oldman():
+            print("You are an old man!")
+
+        oldman() # Invoke the function (call it)
+        
+        output = "You are an old man!"
+
+    1. Arguments
+
+        You can send data to a function with argument
+
+        It can be a variable, string, or any object
+
+        Example:
+
+            # Send a string to the function
+
+            oldman("I'm old")
+
+            This actually won't work, since we need a parameter in
+            the function to begin with.
+
+            Here's how a parameter is put in a function/ how
+            you can add it:
+
+            def oldman(saying):
+            print(f"You said {saying}")
+
+            So now if you put an argument:
+
+            oldman("I'm old")
+
+            that will replace the argument "saying":
+
+                output = "You said: I'm old
+            
+            Note that any parameter you put in the function,
+            in this case, saying, cannot be called out of the
+            function. That parameter is strictly for the 
+            internals of the function.
+
+        You can also make the argument a user input, like this:
+
+        said = input("What do you want to say?: )
+
+        def oldman(saying): 
+            print(f"You said: {saying})
+        
+        oldman(said)
+
+        input = "I'm old"
+        output = "You said: I'm old"
+
+        Here we replaced 'saying' with said, where 'said' is 
+        a variable assigned to an input.
+
+        Q: Why bother even do this at all, why not just
+            use teh variable 'said' with an f-string
+            without the use of a function?
+
+        A: Of course you can do that, and there's nothing
+            wrong with it. But the use of the function 
+            is that you can re-use that function, unlike if
+            you want to reuse the f-string, where you have to
+            print the entire thing everytime.
+
+        Re. Q: What if I just assign that f-string to a variable?
+
+        Re. A: In the example used, you can do that and it
+                will work just fine. But functions allow 
+                you to put an entire code in it, and you
+                can re-call that entire code with just
+                calling the function. That's why 
+                a lot of people use it. It makes 
+                your code much simpler and way less
+                tidious.
+
+        You can also add a SECOND argument like this:
+
+        oldman(said, 2)
+
+        But make sure that your function has 2 arguments:
+
+        def oldman(saying, num):
+            print(f"You said: {saying})
+            printf("You are {num} years past your experation date")
+
+        input = I'm old
+        input = 2
+
+        output = You said: I'm old
+        output = You are 2 years past your experation date
+    
+        2. Return statement
+            return = statement used to end a function and send a result
+                        back to the caller
+            
+            Example:
+
+            def add(x, y):
+                z = x + y
+                return z
+
+
+            print(add(1, 2))
+
+            Result = 3
+
+            Q: What happens if we remove the return?
+
+            A: Well, it will display "None", because there isn't
+                anything to return.
+
+        3. Default arguments
+            A default value for certain parameters
+            default is used when that argument is omitted
+            make your functions more flexible, reduces number of
+            arugments.
+            1. positional, 2. DEFAULT, 3. keyword, 4. arbitrary
+                    ^            ^
+                Completed     Current 
+            
+            Example:
+
+                def net_price(list_price, discount=0, tax=0.05):
+                    return list_price * (1 - discount) * (1 + tax)
+                
+
+                print(net_price(500, 0.1, 0))
+
+
+                output = 450.0
+
+
+            Another example of pre-setting arguments:
+
+                def count(end, start=0):
+                    for x in range(start, end+1):
+                        print(x)
+                        time.sleep(1)
+                    print("DONE!")
+
+                st = int(input("Enter the amount of seconds you want to count to: "))
+
+
+                count(st, 15)
+                        ^
+                        You can either not put the second
+                        arugment here to default to 0,
+                        or put a number, in this case, 15
+        
+        4. Keyword arguements 
+
+            An arguement preceded by an indentifier
+            
+            helps with readablility
+            order of arguements doesn't matter
+
+            1. positional, 2. DEFAULT, 3. KEYWORD, arbitrary
+                   ^             ^            ^
+                Completed     Completed    Current 
+            
+            Example:
+
+                def hello(greeting, title, first, last):
+                    print(f"{greeting} {title}. {first} {last}")
+
+                gr = input("Type your greeting: ")
+                ti = input("Mr, Mrs, Ms, or Dr?: ")
+                fr = input("Enter the recipitents first name: ")
+                ls = input("Enter the recipitents last name: ")
+
+              print(hello(greeting=gr, title=ti, first=fr, last=ls))
+                                ^           ^        ^         ^
+                            See how we put the argument= value
+                            This means that that value will
+                            always be for the specified 
+                            arguement that was assigned to
+                            the value.
+                
+                Q: So with that said, can I just put it in a 
+                    random order like so:
+                
+                (hello(title=ti, greeting=gr, first=fr, last=ls))
+
+                    Unlike positional arguements?
+
+                A: Yes, that is the main purpose of keyword
+                    arguments. Think of it as a dictionary,
+                    you have key/value pairs. No matter what
+                    order you put the arguements.
+
+                NOTE: If you want to use a blend of 
+                    keyword and positional arguments,
+                    make sure to always put the 
+                    positional arguments before
+                    the keyword arguments, or it
+                    will cause a Syntax error.
+
+                    Example:
+
+                    DONT DO:
+
+                        hello(title=ti, greeting=gr, fr, last=ls)
+                                                      ^
+                                                Syntax error
+                    
+                    DO:
+
+                        hello(fr, title=ti, greeting=gr, last=ls)
+                               ^
+                            Valid, no errors
+
+
+                The 2 main reasons to use keyword arguments
+                are:
+
+                1. Helps with readablility
+                    If 2 arguments seem the same, like 
+                    if the first name was "John" and
+                    last was "Johnny", it would be 
+                    hard for the coder to differentiate
+                    between the two. Instead, you can 
+                    assign them to their respected arguments.
+                    You don't lose anything from doing it
+                    but a couple of seconds, and theres 
+                    a lot of advantages of using them.
+
+                2. Order doesn't matter
+                    Imagine you have a large code
+                    that uses positional arguments for calling,
+                    it's very easy to accidentally mess up 
+                    the order. And that could cause an 
+                    error and then you'll have to scroll
+                    through the code to find the error.
+                    If you just put argument=value,
+                    then the order won't matter, and it 
+                    will save you a lot of time. 
+
+        5. Arbitrary arguments
+
+            *args = allows you to pass multiple non-key
+                    arguments
+            
+            **kwargs = allows you to pass multiple keyword-
+                        arguments.
+
+                    * = unpacking operator
+
+            1. positional, 2. DEFAULT, 3. KEYWORD, 4. arbitrary
+                   ^             ^            ^           ^
+                Completed     Completed    Completed   Current 
+            
+            Arbitrary means a VARYING amount of arguments.
+
+                Meaning we don't know how many arguments
+                the user is going to pass in, but it will
+                still be able to manage them.
+
+
+            Example:
+
+            What if you wanted to do this:
+
+                def add(a, b):
+                    return a + b
+                
+                print(add(1, 2, 3)) # You are only limited to the 
+                                ^     amount of arguments you 
+                        Causes error  define in the start of
+                                      the function
+                  
+            Instead do this:
+
+                def add(*args):
+                    total = 0
+                    for arg in args:
+                        total += arg
+                    return total
+                
+                print(add(1, 2, 3)) # You can now put as much
+                                      arguments you want and 
+                                      the -add- function will
+                                      add them
+
+            You could also re-name *args to anything
+            you want, as it doesn't have to be called args:
+
+            Example: 
+
+                def add(*nums)
+
+            (Although to put *args is reccomended as most 
+                do it)
+
+
+            Knowing that, let's create a simple code using 
+            *args:
+
+                def display_name(*args):
+                    for arg in args:
+                        print(arg, end=" ")
+
+                running = True
+
+
+                name = input("Enter a name: ")
+
+
+
+                print(f"Hello {display_name(name)}")
+
+            Now let's use **kwargs
+
+            **kwargs allows you to pass multiple keyword-
+            arguments.
+
+            Example code:
+
+                def print_address(**kwargs): 
+                    for key, value in kwargs.values():
+                        print(f"{key}:{value})
+
+                st = input("Enter your street address: )
+                ci = input("Enter your city: )
+                sa = input("Enter the state you live in: )
+                zi = input("Enter your ZIP code: ) 
+
+                print_address(street=st, 
+                              city=ci, 
+                              state=sa, 
+                              zip=zi)
+
+8. Loops (cont) 
+
+    1. Reversed & Iterables
+
+        An object/collection that can return it's elements one 
+        at a time, allowing it to be iterated over in a loop.
+
+        Example:
+
+            numbers = [1, 2, 3, 4, 5]
+
+            for item in numbers:
+                print(number)
+
+        If you remember the Reversed method that reverses
+        the order of the list:
+
+            for item in reversed(numbers):
+        
+        Let's use sets instead of lists:
+
+            numbers = {1, 2, 3, 4, 5}
+
+            for number in numbers:
+                print(number)
+
+            # What if we want to reverse the set?
+
+            Well, we get an error. Set's can't be reversable.
+
+            Neither can Dictionaries, but Tuples can.
+
+    2. Keyword arguments in print statements
+
+        You can use the -end- keyword argument to change the
+        ending of how something prints, mostly used in 
+        Iterables.
+
+        Example:
+
+            name = "Frogges"
+
+            for character in name:
+                print(character)
+
+            Output:
+
+                F 
+                r 
+                o 
+                g 
+                g 
+                e 
+                s 
+            
+            What if you want it to print all in a normal string, 
+            like "Frogges"?
+
+            We can use -end- to do that:
+
+            for character in name:
+                print(character, end="")
+
+            Output: Frogges
+
+            end= is very flexible, and you can put any 
+            character between end=
+
+            Examples:
+
+            print(character, end=" ")
+
+            Output = F r o g g e s 
+
+            ===========================
+
+            print(character, end="-")
+
+            Output =  F-r-o-g-g-e-s
+
+            ===========================
+
+            print(character, end="U")
+
+            Output = FUrUgUgUeUs
+
+            ===========================
+
+            print(character, end="1")
+
+            Output = F1r1o1g1g1e1s
+
+            ===========================
+
+            I hope you get the point. Whatever character 
+            you put in the string, it will be placed in between 
+            every character of the iterable.
+
+            You can also put as much characters as you want 
+            in the string, for example:
+
+            print(character, end="three")
+
+            Output = FThreerThreeoThreegThreegThreeeThrees
+
+            Let's do dictionaries:
+
+            dict = {"A": 1, "B": 2, "C": 3}
+
+            for key in dict:
+                print(key)
+            
+            This only prints the keys.
+
+            What if you want values?
+            Well:
+
+            for value in dict.values():
+                print(value)
+
+            You can print both Keys and values:
+
+            for key, value in dict.value():
+                print(key, value)
+            
+            # And you can style it:
+
+                print(f"{key}: {value}")
+
+                Output = A: 1, B: 2, C: 3
+
+            .values() will returns the values as an iterable.
+
+            There's another way to print both the keys and values,
+            and is much more convenient, and its the 
+            .items() method:
+
+            for key, value in dict.items():
+                print(key,value)
+
+            Output:
+
+                A 1
+                B 2
+                C 3
+
+            Don't forget that you can style it:
+
+            print(f"{key} = {value}", end=" ")
+
+            Output = A = 1 B = 2 C = 3
+
+9. Data Structures (cont)
+    
+    1. Membership Operators
+
+        Used to test whether a value or variable is found in a 
+        sequence (string, list, tuple, set, or dictionary)
+
+        The operators are:
+            1. in
+            2. not in
+
+        Example:
+
+        word = "Frog"
+
+        letter = input("Guess a letter in the hidden word: ")
+
+        if letter in word:
+            print(f"{letter} was found!")
+        else:
+            print(f"{letter} was not found!")
+
+        You can flip the statements around:
+
+        if letter not in word:
+            print("Not found!")
+        else:
+            print("FOUND!")
+
+        Dev's Opinion that no one asked for:
+            "I think the in & not in operators 
+             are my favorite to use, since it's
+             so easy!"
+        
+        Verdict(Response): "NOBODY ASKED!!"
+
+        Let's work with dictionaries
+
+        Code:
+
+        ranks = {"TheBigOne": "8/10", 
+            "jorg": "6.7/10", 
+            "foog": "8.9/10", 
+            "frogge": "8.5/10"}
+
+        print("Enter a frog to see it's rank,")
+        print("if it isn't there, you can rate it")
+        selected = input("Enter a frog: )
+
+        if selected in ranks:
+            print(f"{selected}'s rating is: {ranks[selected]}")
+        else:
+            print(f"{selected} isn't ranked yet.")
+            srank = input("But you can rate it here (1-10)!: ")
+            print(f"You ranked {selected} at {srank}/10")
+            drank = f"{srank}/10"
+            ranks[selected] = drank
+            print(f"{selected} was now added to the ranks!")
+
+        Did you notice something in the code? Yeah, line 1666:
+
+        print(f"{selected}'s rating is: {ranks[selected]}")
+                                                ^
+                                            This thing
+        
+        This is the formula: {dictionary[variable]}
+
+        If the variable (in this case, an input) has a 
+        key that is in the dictionary, then it will take 
+        that key, find it's value, and print it.
+
+        Example:
+
+        Input: foog
+
+        Output: foog's rating is: 8.9/10
+
+        Summary: The Membership operators; in and not in, return 
+                 a boolean based on if the value or variable
+                 is found within a sequence.
+        
+    2. List comprehension
+
+        A concise way to create lists in Python
+        Compact and easier to read than traditional
+        loops.
+        [expression for value in iterable if condition]
+                                    ^
+                            (meaning you can loop through it)
+
+
+        Example:
+
+            This is a simple code, and this is how most beginners
+            write it:
+
+                doubles = []
+
+                for x in range(1, 11):
+                    doubles.append(x * 2)
+
+
+                print(doubles)
+
+            Output: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+
+            But, with list comprehension, we can cut it down to
+            just this:
+                
+                doubles = [x * 2 for x in range(1, 11)]
+
+                print(doubles)
+
+                Output: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+
+            We turned 4 lines into 2 (more like 3 into 1, 
+            since the print method doesn't have to be in 
+            the code)
+
+            Here we use it but with strings:
+
+                frogs = ["bigone", "frogge", "feeg", "froog"]
+
+                frogs = [frogs.upper() for frog in frogs]
+
+                print(frogs)
+
+                # This just uppercases everything
+
+            You could also do this:
+
+                frogs = [frogs.upper() for frog in ["froog", "feeg"]]
+
+            Here's a little exercise using 'if' statements in
+            in the list comprehension:
+
+                numbers = [1, -2, 3, -4, 5, -6]
+                positive_nums = [num for num in numbers if num >= 0]
+                negative_nums = [num for num in numbers if num < 0]
+                even_nums = [num for num in numbers if num % 2]
+                odd_nums = [num for num in numbers if num % 3]
+
+                print(positive_nums)
+                print(negative_nums)
+                print(even_nums)
+                print(odd_nums)
+            
+    3. Match-case statment (switch)
+
+        An alternative to using many 'elif' statements 
+        Excecute some code if value matches a 'case'
+        Benefits: cleaner and syntax is more readable
+
+        Here's a code using Match-case statments:
+
+        def dotw(day):
+            match day:
+                case 1:
+                    return("Sunday")
+                case 2:
+                    return("Monday")
+                case 3:
+                    return("Tuesday")
+                case 4:
+                    return("Wednesday")
+                case 5:
+                    return("Thursday")
+                case 6:
+                    return("Friday")
+                case 7:
+                    return("Saturday")
+                case _:
+                    return("Not valid")
+
+
+        print(dotw(1))
+
+        So in this example, the cases say 
+
+        case 1 (for the first one)
+
+        so case 1 is if the argument is 1, then that 
+        case plays.
+
+        case _ is normally called the "wild card" which is 
+        just an "else" statments.
+
+        If you want the case to check a string instead of 
+        an integer, you can do this:
+
+        case "string":
+        
+        We can use the "|" character for the "or" method:
+
+        case "frog" | "foog"
+
+    4. Module 
+
+        A file containing code you want to include in your 
+        program
+
+        Use 'import' to include a module (you can use built-in 
+        modules or create your own)
+        Useful to break up a large program to reusable
+        separate files 
+
+        To see everything you can use with modules, 
+        you can print this:
+
+        print(help("modules"))
+
+        You can even see more details for objects in the 
+        help("modules")
+
+        For example, there is something called "pickle" module,
+        so you would do this to see more details on it:
+
+        print(help("pickle"))
+
+        To open a module, you need to do this:
+
+        import pickle # replace "pickle" with the module name 
+
+        To access an object within the module, you can do this:
+
+        print(pickle.dump) # Random function used 
+
+        You can also import the module as any character you
+        want, for example:
+
+        import pickles as dill
+
+        print(dill.dump)
+
+        It should work the same.
+
+        To import a specific object by itself, you can do this:
+
+        from pickle import dump
+
+        And if you do that, then you will no longer need 
+        to use the module name
+
+        before:
+
+        print(pickle.dump)
+
+        after:
+
+        print(dump)
+
+        To create a module, you need to:
+
+        1. Create a new python file and name it
+            Our example:
+
+            frog.py
+        
+        2. Put whatever code you want in it
+            Our example:
+
+            frog = "HEY"
+
+            def find_frog(freg):
+                if freg == "frog":
+                    print("Frog found!")
+                else:
+                    print("No frog found")
+            
+            print(find_frog("frog"))
+        
+        3. Go to another python file where you want to import 
+            the module you just created, and then 
+            type the following at the top:
+
+            import [example_python_file]
+
+            Our example:
+
+            import frog # Don't include the ".py"
+
+            If you want to import a specific variable or 
+            function, you can do this:
+
+            from [example] import [example]
+
+            Our example:
+
+            from frog import frog_finder
+
+        
+            Now you can use the variables in your code!
+
+            Example code:
+
+            import frog
+
+            result = frog.frog_finder("frog")
+
+            print(result)
+
+            Output = Frog found!
+
+10. Basics (cont)
+
+    1. Scopes
+        1. Variable Scope
+            
+            When a variable is visible and accessible
+
+
+        2. Scope resolution
+            
+            (LEGB) Local -> Enclosed -> Global -> Built-in 
+        
+            1. Local
+              Example:
+
+                def func1():
+                    a = 1
+                    print(a)
+                
+                def func2():
+                    b = 2
+                    print(b)
+                
+                func1()
+                func2()
+
+                Output = 1
+                         2
+
+            Variables declared within a function have a -local- 
+            scope.
+
+            Variable A is local to func1(), and Variable B is 
+            local to func2(). 
+
+            If we printed variable B in func1:
+
+            def func1():
+                a = 1
+                print(b)
+            
+            We would get a NameError:
+
+            NameError: name 'b' is not defined
+
+            So basically, functions don't know whats in another 
+            function. This is default.
+
+            We could create one variable to use between both 
+            of the functions:
+
+            def func1():
+                x = 1
+                print(x)
+            
+            def func2():
+                x = 2
+                print(x)
+
+            Output = 1
+                     2
+            
+            2. Enclosed
+            
+            An -Enclosed- scope is when a function is in another 
+            function (Called 'parent' function):
+
+            def func1(): # Parent function, func1()
+                x = 1
+
+                def func2(): # Enclosed function, func2()
+                    x = 2
+                    print(x)
+            print(x)
+
+            But instead of doing this at the end of the code:
+
+            func1()
+            func2()
+
+            We would have to do this:
+
+            def func1():
+                x = 1
+
+                def func2():
+                    x = 2
+                    print(x)
+                
+                func2() # To call an enclosed function, you 
+                          will have to call the enclosed
+                          function within the "parent"
+                          function, in this case, func1()
+            
+            func1() # Call the parent function normally
+
+            3. Global
+
+                A variable outside of any functions
+
+                Example:
+
+                        def func1():
+                            x = 1 # Local
+                            print(x)
+                        
+                        def func2():
+                            x = 2 # Local
+                            print(x)
+
+                        x = 3 # Global
+
+                        func1()
+                        func2()
+
+                        Output = 1
+                                 2
+                
+                ^ The above example is a normal code using 
+                Local variables, the output shows that the code 
+                is only using the local variables, but if we 
+                remove the local variables:
+
+                    def func1():
+                        print(x)
+
+                    def func2():
+                        print(x)
+                    
+                    x = 3
+
+                    func1()
+                    func2()
+
+                    Output = 3
+
+                Then the output will be 3, which means that 
+                it moves on to and uses the global variable.
+
+            4. Built in
+
+                A built-in scope is one build in to a module 
+                or data structure.
+
+                Example:
+
+                from math import e  # Built-in variable
+
+                def func1():
+                    print(e)
+
+                e = 3 # Global variable
+
+                func1()
+
+
+                2 variables having the same name should be fine 
+                only if they are in different scopes.
+
+            
+            Back to the scope resolution order, 
+
+            Local -> Enclosed -> Global -> Built-in
+
+            It will first try to find a local variable, 
+            then enclosed, then global, then built-in.
+
+            For example,
+
+                If there are no local variables but there is an 
+                Enclosed variable and global variable, the 
+                Enclosed variable will be printed. 
+
+    2. Dunders __name__ & __main__
+
+        We will be focusing on this IF statement:
+
+            if __name__ == '__main__':
+                main()
+
+        (This script can be imported OR run standalone)
+        Functions and classes in this module can be reused
+        without the main block of code executing
+
+        def main():        # Main block of code
+            [code goes here]
+        
+        if __name__ == '__main__': # Script
+            main()
+        
+        If you see the IF statement that means that the code 
+        can be imported or run standalone
+
+        Sometimes you would like the functionallity of a 
+        program without executing the main block of code,
+        
+        Example:
+
+            ex. library, import a library for functionallity
+                When running library directly, display a 
+                help page.
+
+            If you wanted to import a library (example,
+            'pickle' module), it could instead display the 
+            help page for that library, and if we were 
+            importing it, we wouldn't want a help page.
+
+
+            Good practice (code is modular,
+                            helps readability,
+                            leaves no global variables,
+                            avoid unintended execution)
+
+11. Classes (Data Structures (cont))
+
+    1. Object Oriented Programming
+
+        Object = A "bundle" of related attributes (variables) and 
+                 methods (functions)
+
+                 Ex. phone, cup, book
+
+                 # Each of the ^ objects has attributes
+
+                 You need a "class" to create many objects
+
+                 class = (blueprint) used to design the structure
+                          layout of an object
+        
+        Example code:
+
+        class Car:
+
+            def __init__(self, model, year, for_sale):
+                self.model = model
+                self.year = year
+                self.for_sale = for_sale
+
+            dcar = Car("FrogMobile", 2020, True)
+
+            print(dcar.model)
+            print(dcar.year)
+            print(dcar.for_sale)
+
+            Output = 
+
+            FrogMobile
+            2020
+            True
+
+        Let's focus on this:
+
+        def __init__(self, model, year, for_sale):
+                self.model = model
+                self.year = year
+                self.for_sale = for_sale
+
+        This is a constructor, and it is needed within classes 
+        to create objects. You need self, then put self.[argument]
+        , then assign it to the argument.
+
+        Then you assign a variable to the class with all of 
+        those arguments filled out, like so:
+
+            dcar = Car("FrogMobile", 2020, True)
+
+        Then to print it, you use this formula:
+
+        [variable].[argument]
+
+        In this case:
+
+            dcar.model
+        
+        
+        Now let's add another car variable:
+
+        bcar = Car("BigOne", "2001", False)
+
+        Then you can access -bcars- attributes:
+
+        print(bcar.model)
+        print(bcar.year)
+
+        etc.
+
+        Now let's create some functions within the Car class:
+
+
+            def drive(self):
+                print("Car is driving")
+
+            def stop(self):
+                print("Car has stopped")
+
+        Now you can call them like this:
+
+            dcar.drive()
+
+            & 
+
+            dcar.stop()
+
+
+            Output = Car is driving
+                     Car has stopped
+            
+        (Use this formula when calling: )
+
+            [variable].[function]()
+                ^            ^
+            ex. dcar    ex. drive()
+
+        Also if you want to use an f-string in a class, 
+
+        Don't do: print(f"{model} is driving")
+
+        Do: print(f"{self.model} is driving")
+
+        That's why in our functions we put 'self' as an argument:
+
+        def drive(self):
+
+        You can't access the constructor's arguments without 
+        self.
+
+
+        You cannot create or use variables in a class without self.
+
+    2. Class variables
+
+        Shared amoung all instances of a class
+        Defined outside the constructor:
+
+        class Car:
+
+            wheels =  4 # class variable 
+
+            def __init__(self): # constructor 
+                pass
+        
+        Allows you to share data amoung all objects created from 
+        that class.
+
+        With instance variables, each object has their own version 
+        (variable), with class variables, all those objects share 
+        1 variable.
+
+        Example code:
+
+        class Frog:
+
+            country = "USA"
+            num_frogs = 0
+
+            def __init__(self, species, color, age):
+
+                self.species = species
+                self.color = color
+                self.age = age
+                Frog.num_frogs += 1 # Adds 1 to num_frogs
+
+                # These are all instance variables, you need to 
+                  use self.[attribute] to call/use them.
+
+                frog1 = Frog("Bullfrog", "Green", 2)
+                frog2 = Frog("Treefrog", "Grey", 1)
+
+                print(frog1.species) # instance variable
+                print(frog2.species) # instance variable
+                print(frog1.country) # class variable
+                print(Frog.country) # class variable
+                print(Frog.num_frogs) # class variable
+
+                print(f"The country of {Frog.country} currently has 
+                        {Frog.num_frogs} Frogs.)
+                         ^
+                        Line break due to format, don't do this.
+
+                
+                Output = Bullfrog
+                         Treefrog
+                         USA
+                         USA
+                         2
+                         The country of USA currently has 2 Frogs
+
+    3. Inheritance
+
+        Allows a class to inherit attributes and methods from 
+        another class
+        Helps with code reusability and extensibility
+
+        Formula:
+
+        class [child class]([parent class])
+
+        Ex:
+
+        class Frog(Animal)
+
+
+        Example code:
+
+        class Animal:
+            def __init__(self, name):
+                self.name = name
+                self.alive = True
+
+            def eat(self):
+                print(f"{self.name} is eating")
+
+            def sleep(self):
+                print(f"{self.name} is sleeping")
+        
+        class Frog(Animal):
+            def speak(self):
+                print(f"{self.name} says: 'Buffalo Bacon Burgah'")
+
+
+        frog = Frog("Phorgg")
+        print(frog.name)
+        print(frog.alive)
+
+        frog.eat()
+        frog.sleep()
+        frog.speak()
+
+        Output = Phorgg
+                 True
+                 Phorgg is eating
+                 Phrogg is sleeping
+                 Phrogg says: 'Buffalo Bacon Burgah'
+        
+        1. Multiple Inheritance & Multilevel Inheritance
+
+            Multiple Inheritance:
+
+            Inherit from more than one parent class
+
+
+            class [child class]([parent class 1], [parent class 2])
+
+            Multilevel Inheritance:
+
+                inherit from a parent which inherits from another
+                parent.
+
+            Example code:
+
+            class Animal():
+                def eat(self):
+                    print(f"{self.name} is eating")
+
+                def sleep(self):
+                    print(f"{self.name} is sleeping")
+
+            class Prey(Animal):
+                def flee(self):
+                    print("Animal status: fleeing")
+
+            class Predator(Animal):
+                def hunt(self):
+                    print("Animal status: Hunting")
+
+            class Bug(Prey):
+                pass
+
+            class Frog(Predator):
+                pass
+
+            class Fish(Prey, Predator):
+                pass
+
+            bug = Bug()
+            frog = Frog()
+            fish = Fish()
+
+
+            So if we do this:
+
+            frog.hunt()
+
+            the Output will be:
+
+            Animal status: Hunting
+
+            But if we do this:
+
+            frog.flee()
+
+            It will give an error. 
+
+            This is because the class Frog()'s parent class is
+            Predator(), which contains the hunt() function. But,
+            the class Prey() is not a parent class to Frog(), so 
+            the function flee() basically doesn't exist.
+
+            But, with Fish(), it has both Predator() and Prey()
+            as it's parent classes.
+
+            So, we can use both Prey() and Predator() with Fish().
+
+            Also, notice that Animal() is the parent class for 
+            Prey() and Predator(), and either Prey() or 
+            Predator() is a parent for each of the other classes,
+            Frog(), Bug(), and Fish(). So, we should be able to
+            call some functions in the Animal() class:
+
+            frog.eat()
+            bug.sleep()
+            fish.eat()
+
+            Output = Animal status: eating
+                     Animal status: sleeping
+                     Animal status: eating
+
+        2. super() function
+
+            Function used in a child class to call methods from 
+            a parent class (Aka. superclass).
+            Allows you to extend the functionality of the 
+            inherited methods.
+
+            Example code:
+
+                class Shape:
+                    def __init__(self, color, filled, radius):
+                        self.color = color
+                        self.filled = filled
+                        self.radius = radius
+                    
+                    def describe(self):
+                        print(f"It is {self.color}")
+
+
+                class Circle(Shape):
+                    def __init__(self, color, filled, radius):
+                        super().__init__(color, filled)
+                        self.radius = radius
+
+                class Square(Shape):
+                    def __init__(self, color, filled, width):
+                        super().__init__(color, filled)
+                        self.width = width
+
+                class Triangle(Shape):
+                    def __init__(self, color, filled, width, height):
+                        super().__init__(color, filled)
+                        self.width = width
+                        self.height = height
+                
+                circle = Circle("red", True, 5)
+                square = Square("blue", True, 10)
+                triangle = Triangle("green", False, 10, 5)
+
+                print(circle.color, circle.filled, circle.radius)
+                print(square.color, square.width)
+                print(triangle.filled, triangle.height)
+
+                circle.describe()
+                sqaure.describe()
+                triangle.describe()
+
+                Output = red True 5
+                         blue 10
+                         False 5
+                         It is red
+                         It is blue
+                         It is green
+
+    4. Polymorphism
+
+        Greek word that means to "have many forms or faces"
+        Poly = Many 
+        Morphe = Form 
+
+        TWO WAYS TO ACHIEVE POLYMORPHISM 
+        
+        1. Inheritance = An object could be treated of  DONE
+                         the same type as a parent class
+        2. "Duck typing" = Object must have necessary
+                           attributes/methods
+
+        Example code:
+        
+        from abc import ABC, abstractmethod
+
+        class Shape:
+                    
+            @abstractmethod
+            def area(self):
+                pass
+
+        class Circle(Shape):
+            
+            def __init__(self, radius):
+                self.radius = radius
+
+            def area(self):
+                return 3.14 * self.radius ** 2
+                
+        class Square(Shape):
+            def __init__(self, side):
+                self.side = side
+
+            def area(self):
+                return self.side ** 2
+                
+        class Triangle(Shape):
+            
+            def __init__(self, base, height):
+                self.base = base
+                self.height = height
+            
+            def area(self):
+                return self.base * self.height * 0.5
+
+                
+        circle = Circle()
+        square = Square()
+        triangle = Triangle()
+
+        shapes = [Circle(4), Square(5), Triangle(3, 5)]
+
+        for shape in shapes:
+            print(shape.area())
+
+        Output = 50.24
+                 25
+                 7.5
+
+        1. Duck typing
+
+            Another way to achieve polymorphism besides Inheritance
+            Object must have the minimum necessary attributes/
+            methods
+
+            QUOTES!!!
+
+            "If it looks like a duck and quacks
+             like a duck, it must be a duck" - Joe Biden, 2024
+            
+            Example code:
+
+            class Animal:
+                alive = True
+
+            class Frog(Animal):
+                def speak(self):
+                    print("Buffalo Bacon Burgahh")
+
+            class Bug(Animal):
+                def speak(self):
+                    print("Buzzzh")
+
+            class Car:
+                
+                alive = False
+                
+                def speak(self):
+                    print("Honk")
+
+            animals = [Frog(), Bug(), Car()]
+
+            for animal in animals:
+                animal.speak
+                print(animal.alive)
+
+            Output = 
+                    Buffalo Bacon Burgahh
+                    True
+                    Buzzzh
+                    True
+                    Honk
+                    False
+            
+    5. Static methods
+        
+        A method that belongs to a class rather than any 
+        object from that class (instance). Usually used 
+        for general utility functions 
+
+        1. Instance methods
+
+            Best for operations on instances of the class (objects)
+
+        2. Static methods
+
+            Best for utility functions that do not need access to 
+            class data
+
+            Example code:
+        
+            class Employee:
+
+                def __init__(self, name, position):
+                    self.name = name
+                    self.position = position
+                
+                def get_info(self):
+                    return f"{self.name} = {self.position}"
+                
+                @staticmethod
+                def is_valid_position(position):
+                    valid_positions = ["Manager", "Janitor", "Cashier"]
+                    return position in valid_positions
+
+            employee1 = Employee("TheFrog", "Manager")
+            employee2 = Employee("iFrog", "Janitor")
+            employee3 = Employee("'How can I help you?' ahh frog", "Cashier")
+
+            print(Employee.is_valid_position("Cook"))
+
+    6. Class methods
+
+        Allow operations related to the class itself
+        Take (cls) as the first parameter, which represents 
+        the class itself.
+
+        Example code:
+
+        class Student:
+
+            count = 0
+
+            def __init__(self, name, gpa): # constructor
+                self.name = name
+                self.gpa = gpa
+                Student.count += 1
+
+            def get_info(self): # Instance method
+                return f"{self.name} {self.gpa}"
+            
+            @classmethod
+            def get_count(cls): # Class method
+                return f"Total students: {cls.count}"
+            
+        student1 = Student("Beeger", 3)
+        student2 = Student("Jimes", 1)
+        student3 = Student("Riff", 4.8)
+
+        print(Student.get_count())
+
+
+        Notice how in the class method we use cls instead of self.
+        
+        cls, aka class, is the 'self' variable for class 
+        methods.
+
+    7. Magic methods
+
+        Dunder methods (double underscore):
+                                            __init__
+                                            __str__
+                                            __eq__
+        They are automatically called by 
+        many of Python's built-in operations.
+        They allow developers to define or customize
+        the behavior of objects.
+
+        Example code:
+
+        class Student:
+
+
+            def __init__(self, name, gpa):
+                self.name = name
+                self.gpa = gpa
+
+            def __str__(self):
+                return f"name: {self.name} gpa: {self.gpa}"
+            
+            def __eq__(self, other):
+                return self.name == other.name
+            
+            def __gt__(self, other):
+                return self.gpa > other.gpa
+
+        student1 = Student("Bough", 3.3)
+        student2 = Student("Gurborogh", 1.0)
+        student3 = Student("Dougahin", 0.1)
+
+    8. Property
+
+        Decorator used to define a method as a 
+        property (it can be accessed like 
+        an attribute)
+        Benefit: Add additional logic when read, write, 
+        or delete attributes
+        Gives you getter, setter, and deleter method 
+
+        Example code:
+
+        class Rectangle:
+
+            def __init__(self, width, height):
+                self._width = width
+                self._height = height
+
+            @property
+            def width(self):
+                return f"{self._width}in"
+
+            @property
+            def height(self):
+                return f"{self._height}in"
+
+            @width.setter
+            def width(self, new_width):
+                if new_width > 0:
+                    self._width = new_width
+                else:
+                    print("Width must be greater than zero")
+
+            @height.setter
+            def height(self, new_height):
+                if new_height > 0:
+                    self._height = new_height
+                else:
+                    print("Height must be greater than zero")
+
+            @width.deleter
+            def width(self):
+                del self._width
+                print('Width has been deleted')
+
+            @height.deleter
+            def width(self):
+                del self._height
+                print('Height has been deleted')
+
+        rectangle = Rectangle(9, 11)
+
+        rectangle.width = 9
+        rectangle.height = 11
+
+        del rectangle.width
+        del rectangle.height
+
+
+        print(rectangle._width)
+        print(rectangle._height)
+
+        Did you notice something in the code?
+
+        Well, if you didn't it's this:
+
+        self._width
+             ^
+          this thing
+
+        That thing makes the object 'private' or "Getter"
+
+        That means that it tells you and other devs that 
+        those objects are private, or protected.
+
+        To get this, prefix your objects with 1 underscore.
+
+        Examples:
+
+        self._frog
+        self._bugg
+
+        Formula:
+
+        self._[object]
+
+        Recap:
+
+        Getter methods to read
+        Setter methods to write
+        Deleter methods to delete
+
+12. Functions (cont) / Basics (cont)
+
+    1. Decorators (Functions)
+
+        A function that extends the behavior of
+        another function without modifying 
+        the base function
+
+        Pass the base function as an argument 
+        to the decorator.
+
+        Example code:
+
+        def add_frog(func):
+            def frog(*args, **kwargs):
+                print("Another frog added")
+                func(*args, **kwargs)
+            return frog 
+
+        def add_plant(func):
+            def plant(*args, **kwargs):
+                print("Plant added")
+                func(*args, **kwargs)
+            return plant
+
+        @add_plant
+        @add_frog
+        def get_froog(type):
+            print(f"Froog ({type}) has been delivered")
+
+        get_froog("Bullfrog")
+
+
+        NOTE: If you are going to pass an arugment in
+              the main function (in this case,
+              get_froog()), you need to put an 
+              argument in the wrapper functions(frog,
+              plant). Most people use *args and 
+              **kwargs, since it is flexible.
+
+    2. Exemption handling (Basics)
+
+        exception = An event that interrupts the 
+                    flow of a program
+
+                    (ZeroDivisionError, TypeError, ValueError)
+
+                    1. try, 2. except, 3. finally 
+
+        What causes the errors:
+
+        ZeroDivisionError:
+
+        1 / 0 # divison by zero
+
+        TypeError:
+
+        1 + "1" # Using the wrong type of object for the 
+                function
+
+        ValueError:
+
+        int("frog") # When you try to typecast a value to one 
+                    that doesn't make sense / not possible.
+
+
+            1. Try blocks
+
+            Look at this code:
+
+            number = int(input("Enter a number: "))
+
+            print(1 / number)
+
+            This can either cause a ZeroDivisionError,
+            By putting '0' as the input, or you could
+            cause a ValueError, by putting 'frog' or 
+            any other non integer number as the input.
+
+            And those errors will stop the code.
+
+            Using a try block will prevent the code 
+            from stoping, basically we are 'containing'
+            the 'dangerous' code. 
+
+            Heres how to apply the Try block to your code:
+
+
+
+            try:
+                number = int(input("Enter a number: "))
+
+                print(1 / number)
+
+            except ZeroDivisionError:
+                print("Can't divde by zero you idiot!")
+            except ValueError:
+                print("You can't divide a goddamn string you monkey!")
+
+                
+            Now let's run some tests:
+
+            Input = 0
+            Error = ZeroDivisionError
+            Output = Can't divide by zero you idiot!
+
+            ==========================================
+
+            Input = frog und bug 
+            Error = ValueError
+            Output = You can't divide a goddamn string you monkey!
+
+            ==========================================
+
+            Now if we put a finally block within the try block:
+
+            finally:
+                print("Alright done")
+
+            It will run even if nothing or something goes wrong.
+
+            Tests:
+
+            ================================================
+
+            Input = 0
+            Output = You can't divide by zero you idiot!
+                    Alright done
+            
+            ==================================================
+
+            Input = 3
+            Output = 0.33333333333
+                    Alright done 
+            
+            ==================================================
+
+            The finally block will become more useful in the 
+            future.
+
+    3. File Detection Basics
+
+        Using python to detect a file in the same folder as 
+        your code file.
+
+        Example code:
+
+        import os
+
+        file_path = "C:/Users/Froggster/IKcode/Exs/frog.txt
+
+        if os.path.exists(file_path):
+            print(f"The location '{file_path}' exists")
+
+            if os.path.isfile(file_path):
+                print("That is a file")
+            elif os.path.isdir(file_path):
+                print("That is a directory.)
+        else:
+            print("The location doesn't exist")
+    
+    4. Writing files
+
+        Using python to create files 
+
+        There are 3 types:
+
+        1. .txt 2. .json 3. .csv
+
+        Let's focus on .txt
+
+        Example code:
+
+        txt = "Frog Stuff"
+
+        file = "frogstuff.txt"
+
+        with open(file, "w") as ile:
+            ile.write(txt)
+            print(f"txt. file '{file}' was created")
+
+        Let's focus on this line:
+        
+        with open(file, "w") as ile:
+        ^         ^    ^   
+    Statement   file  mode 
+    Method, it  vari
+    will open   able 
+    then close 
+    your file, 
+    which will
+    save it from
+    crashing.
+
+        Let's go more into the "modes".
+
+        We current have "w":
+
+        with open(file, "w") as ile:
+                        ^
+                        here 
+        
+        'w' = write in the file 
+        'x' = will write if the file doesn't exist, but if it does,
+            it will crash / cause an error.
+        'a' = append the file
+        'r' = read the file 
+
+        NOTE: the reading mode 'r' is super useful especially for 
+            doing a Bookbot program.
+        
+        We can also make an 'absolute' file path, like this:
+
+        C:/Users/frogger/desktop/frogstuff.txt
+
+        We can also use the append 'a' mode to basically
+        'duplicate' the text, and we can use \n to make a new 
+        line for each duplicate:
+
+        with open(file, "a") as ile:
+            ile.write("\n" + txt)
+            print(f"txt. file '{file}' was created")
+        
+        Output = Frog Stuff 
+                Frog Stuff 
+
+        Without \n (break line):
+
+        Output = Frog Stuff Frog Stuff 
+
+        What's great is that everytime you run it, the text 
+        will build up, not overwrite what's already on the file.
+    
+    5. Reading files 
+
+        Read files (.txt, .json, .csv)
+
+        Example code: 
+
+
+
+            file = "/home/yusuf/Documents/ikcode/frogstuff.txt"
+
+
+
+            with open(file, "r") as f:
+                content = f.read()
+                print(content)
+
+        You can put this in a try / except block for errors.
+
+        Errors to be found:
+
+        FileNotFoundError
+
+        PermissionError
+
+        Here's how to read a .json file:
+
+            file = "/home/yusuf/Documents/ikcode/frogstuff.json"
+
+
+
+            with open(file, "r") as f:
+                content = json.load(f)
+                print(content)
+
+        And here's how to read a .csv file:
+
+           file = "/home/yusuf/Documents/ikcode/frogstuff.csv"
+
+
+
+            with open(file, "r") as f:
+                content = csv.reader(f)
+                for line in content: # This loop is just used to
+                    print(line[0])     make it format better.
+
+    6. Date & Time 
+
+
+        Here's how to put the date an time using Python 
+
+        date = datetime.date(2025, 5, 5)
+        print(date)
+
+        ^
+        This is how you print out a specifed date 
+
+        (Make sure to print it though)
+
+        today = datetime.date.today()
+        print(today)
+
+        ^
+        This is how to print the current date
+
+        time = datetime.time(12, 30, 00)
+        print(time)
+
+        ^
+        This is how to print a specifed time 
+
+        now = datetime.datetime.now()
+        print(now)
+
+        ^
+        This is how to print the current time and date
+
+        When you print the current time and date it may be 
+        un-formatted.
+
+        now = now.strftime("%Y-%m-%d %H:%M:%S")
+
+        ^
+        Re-assign the variable used for the current 
+        date & time to the code given.
+
+
+        Here's a small exercise using datetime:
+
+        target_date = datetime.datetime(2025, 7, 22, 12, 00, 00)
+        current_date = datetime.datetime.now()
+
+        if target_date < current_date:
+            print("Target date is in the past")
+        elif target_date > current_date:
+            print("Target date is in the future")
+        elif target_date == current_date:
+            print("Target date is now")
+
+        So what you do is put a target date, and then 
+        your current date, and it will tell you if you 
+        have passed, not yet passed, or currently passed 
+        the date.
+
+    7. Multithreading
+
+        Used to preform multiple tasks concurrently (multitasking)
+
+        Good for I/O (Input / Output) bound tasks like 
+        reading files or fetching data from APIs.
+
+        Formula:
+
+        threading.Thread(target=[function])
+
+        Example code:
+
+            import threading
+            import time
+
+            def walk_dog(name):
+                print(f"Walking {name}...")
+                time.sleep(8)
+                print(f"You walked {name}")
+
+            def take_out_trash():
+                print("Taking out the trash...")
+                time.sleep(2)
+                print("You took out the trash")
+
+            def get_mail():
+                print("Getting the mail...")
+                time.sleep(4)
+                print("You got the mail")
+
+            chore1 = threading.Thread(target=walk_dog, args=("Bingus",))
+            chore1.start()
+
+            chore2 = threading.Thread(target=take_out_trash)
+            chore2.start()
+
+            chore3 = threading.Thread(target=get_mail)
+            chore3.start()
+        
+        
+        Let's take a look at this line:
+
+        chore1 = threading.Thread(target=walk_dog, args=("Bingus",))
+
+        Specifically this part:
+
+        args=("Bingus",)
+                      ^
+                Even MORE specific,
+                this.
+
+        That comma right after the string. If that wasn't there, 
+        we would get a positional error as it would no longer
+        be a tuple. We can fix this in 2 ways:
+
+        1. Add a comma after string 
+        2. Add a second parameter
+            Ex: Add a last name to the dog 
+
+        Both are the same, and you can do which ever fits 
+        your needs. 
+
+        
+        MOST RANDOM DEV NOTE ON EARTH:
+
+            My favorite method in the entirety of python is
+            the time.sleep() method.
+
+            - Dingus Dev, May 12 2025 21:20 UTC
+
+        Verdict:
+
+            WE. DON'T. CARE!!
+
+    8. How to connect to an API using Python 
+
+        Example code:
+
+            import requests
+
+            base_url = "http://www.wtvehiclesapi.sgambe.serv00.net/api"
+
+            def get_info(name):
+                url = f"{base_url}/vehicles/{name}"
+                response = requests.get(url, headers=headers)
+                print(f"Status Code: {response.status_code}")
+                print(f"Response Text: {response.text}")
+                
+                if response.status_code == 200:
+                    try:
+                        pdata = response.json()
+                        print("Data retrieved successfully.")
+                        return pdata
+                    except ValueError:
+                        print("Response is not JSON formatted.")
+                        return None
+                else:
+                    print("Failed to retrieve data.")
+                    return None
+
+            name = "t-72a"
+            vinfo = get_info(name)
+        This code returns a 404, because what it was looking for
+        wasn't found. But that doesn't matter. In fact, that means
+        the code works, because it is successfully getting and 
+        searching for the info. 
+
+        It doesn't matter if the object wasn't found, because 
+        the code's job is just to access the API and look 
+        for your specified object, in this case, T-72A.
+
+        If you get the code 200, what means the object  
+        successfully found.
+
+13. PyQt5
+
+    1. Labels &Standard setup 
+
+        import sys 
+
+        from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+        from PyQt5.QtGui import QIcon, QFont
+        from PyQt5.QtCore import Qt
+
+        class MainWindow(QMainWindow):
+            def __init__(self):
+                super().__init__()
+                self.setWindowTitle("IKcode GUI - v1.0.PyQt5")
+                self.setGeometry(100, 100, 800, 600)
+                self.setWindowIcon(QIcon("ikcode.png"))  
+                
+                label = QLabel("IKcode GUI", self)
+                label.setFont(QFont("Veranda", 18, QFont.Bold))
+                label.setGeometry(0, 0, 500, 100)
+                label.setStyleSheet("color: white; background-color: #1a7689;")
+                label.setAlignment(Qt.AlignCenter)
+                
+
+                
+
+        def main():
+            app = QApplication(sys.argv)
+            window = MainWindow()
+            window.show()
+            sys.exit(app.exec_())
+
+        if __name__ == "__main__":
+            main()
+
+    
+    2. How to add pictures
+
+        import sys 
+
+        from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+        from PyQt5.QtGui import QIcon, QFont, QPixmap
+        from PyQt5.QtCore import Qt
+
+        class MainWindow(QMainWindow):
+            def __init__(self):
+                super().__init__()
+                self.setWindowTitle("IKcode GUI - v1.0.PyQt5")
+                self.setGeometry(100, 100, 800, 800)
+                self.setWindowIcon(QIcon("ikcode.png"))
+                
+                label = QLabel("IKcode GUI", self)
+                label.setFont(QFont("Veranda", 18, QFont.Bold))
+                label.setGeometry(0, 0, 500, 100)
+                label.setStyleSheet("color: white; background-color: #1a7689;")
+                label.setAlignment(Qt.AlignCenter)
+
+                picture = QLabel(self)
+                pixmap = QPixmap("ikcode_image.png")  
+                picture.setPixmap(pixmap)
+                picture.setScaledContents(True)
+                picture.setGeometry(0, 100, 250, 250) 
+
+                pixmap = QPixmap("ikcode.png")
+
+                picture.setPixmap(pixmap)
+                picture.setScaledContents(True)
+
+
+                
+
+        def main():
+            app = QApplication(sys.argv)
+            window = MainWindow()
+            window.show()
+            sys.exit(app.exec_())
+
+        if __name__ == "__main__":
+            main()
+
+    3. Layouts 
+
+        [No Info at this time (22:20 UTC, 5-15-2025)]
+
+
+    4. Buttons
+
+
+        class MainWindow(QMainWindow):
+            def __init__(self):
+                super().__init__()
+                self.setWindowTitle("IKcode GUI - v1.0.PyQt5")
+                self.setGeometry(100, 100, 800, 800)
+                self.setWindowIcon(QIcon("ikcode.png"))
+                self.setStyleSheet("background-color: #1a7689;")
+                self.blabel = QLabel("   GUI disabled", self)
+                self.initUI()
+                
+                label = QLabel("IKcode GUI", self)
+                label.setFont(QFont("Veranda", 18, QFont.Bold))
+                label.setGeometry(0, 0, 500, 100)
+                label.setStyleSheet("color: white; background-color: #1a7689; border: 2px solid #ffcc00;")
+                label.setAlignment(Qt.AlignCenter)
+                
+                pixmap = QPixmap("ikcode.png")
+                picture_label = QLabel(self)
+                scaled_pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+                picture_label.setPixmap(scaled_pixmap)
+                picture_label.setGeometry(500, 0, 100, 100)
+                picture_label.setAlignment(Qt.AlignCenter)
+
+            def initUI(self):
+                self.button = QPushButton("Enable GUI", self)
+                self.button.setGeometry(300, 150, 200, 50)
+                self.button.setStyleSheet("border: 2px solid #ffcc00; background-color: #155e6e; color: white; font-size: 20px; font-family: Veranda;")
+                self.button.clicked.connect(self.on_click)
+
+            
+                self.blabel.setGeometry(300, 210, 200, 50)
+                self.blabel.setStyleSheet("background-color: #155e6e; color: white; font-size: 20px; font-family: Veranda;")
+
+
+            def on_click(self):
+                self.blabel.setText("   GUI enabled")
+                self.button.setText("Disable GUI")
+                self.button.clicked.connect(self.off_click)
+            
+            def off_click(self):
+                self.blabel.setText("   GUI disabled")
+                self.button.setText("Enable GUI")
+                self.button.clicked.connect(self.on_click)
+
+    NOTICE:
+
+        The rest could not be put into this txt file, 
+        to learn more about PyQt5, locate the "ikcodegui.py"
+        file in ikcode/learning_projs directory.
+
+
+    5. CSS 
+
+        import sys
+        from PyQt5.QtWidgets import (QApplication, QMainWindow,
+                                    QPushButton, QWidget,
+                                    QHBoxLayout)
+
+
+        class MainWindow(QMainWindow):
+            def __init__(self):
+                super().__init__()
+                self.button1 = QPushButton("No. 1")
+                self.button2 = QPushButton("No. 2")
+                self.button3 = QPushButton("No. 3")
+                self.initUI()
+
+            
+            def initUI(self):
+                central_widget = QWidget()
+                self.setCentralWidget(central_widget)
+
+                hbox = QHBoxLayout()
+
+                hbox.addWidget(self.button1)
+                hbox.addWidget(self.button2)
+                hbox.addWidget(self.button3)
+
+                central_widget.setLayout(hbox)
+
+                self.button1.setObjectName("button1")
+                self.button2.setObjectName("button2")
+                self.button3.setObjectName("button3")
+
+                self.setStyleSheet(""" 
+                    QPushButton {
+                        font-size: 40px;
+                        font-family: 'Verdana';
+                        padding: 15px 75px;
+                        margin: 20;
+                        border: 3px solid;
+                        border-radius: 10px;
+                        
+                    }
+                    QPushButton#button1 {
+                        background-color: red;
+                    }
+                    QPushButton#button2 {
+                        background-color: green;
+                    }
+                    QPushButton#button3 {
+                        background-color: blue;
+                    }
+                    QPushButton#button1:hover {
+                        background-color: darkred;
+                    }
+                    QPushButton#button2:hover {
+                        background-color: darkgreen;
+                    }
+                    QPushButton#button3:hover {
+                        background-color: darkblue;
+                    }
+                        
+        """)
+
+
+
+        if __name__ == "__main__":
+            app = QApplication(sys.argv)
+            window = MainWindow()
+            window.show()
+            sys.exit(app.exec_())

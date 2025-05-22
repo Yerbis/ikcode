@@ -1,0 +1,33 @@
+1.  Before starting any code 
+    that you want to use with flask,
+    you need to import it. Heres how:
+
+    from flask import flask
+
+2. Creating a webapp object
+
+    app = Flask(__name__)
+
+3. Decorating a function with a URL
+
+    @app.route('\')
+
+4. Running your Webapps behavior(s)
+
+    def hello()-> str:
+        return 'Hello flask!'
+    
+5. Run webapp
+
+    app.run()
+
+To see the full code all together, go to
+mymodules/hello_flask.py
+
+2/6. the url structured:
+    
+    http://127.0.0.1:5000/
+                ^      ^
+        I.P address   port
+
+2/7. 

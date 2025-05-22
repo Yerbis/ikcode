@@ -1,0 +1,45 @@
+1. Classes:
+    1. You add behaviors to a class  by creating methods.
+
+    2. To add an attribute to a class, create a variable.
+
+    3. Every method is passed an -alias- to the current object as it's first
+        arguement. Python convention insists that this first arguement 
+        is called -self-.
+
+    4. attribute values are initialized by the __init__ method (dunder init).
+        This method lets you assign starting values to your attributes when a
+        new object is created. Dunder init receives a copy of any values 
+        passed to the class when an object is created. For example, the values
+        -100- and -10- are passed into __init__ when this object is created:
+        mycount2 = CountFromBy(100, 10)
+    
+    5. Another method is __repr__(dunder repr), which allows you to control
+        how an object appears when displayed at the >>> prompt, as well as 
+        when used with the -print- BIF.
+
+2. Function Decorators
+    1. When you need to store server-eside state within a flask webapp, use sessions
+
+    2. *args is shorthand for "expand to a list of items."
+    3. **kwargs is shorthand for "expand to a dictionary of keys and values"
+
+
+3. Advanced iteration 
+
+    1. You can use CSV instead of BIF files to work with data in files 
+    
+    2. Method chains allow you to perform processing on data in one line 
+        of code. The string.strip().split() chain is seen a lot.
+    
+    3. A for loop can be used to transform data from one format to another 
+        and can be reworked as comprehension.
+    
+    4. A listcomp is code surrounded by "[]", while a dictcomp is code 
+        surrounded by "{}". A setcomp is also code that is surrounded by 
+        "{}" (but without the dictcomps colon ":")
+    
+    5. There is no tuple comprehension
+
+    6. If you spot a listcomp code surrounded by "()", then it's a 
+        generator.

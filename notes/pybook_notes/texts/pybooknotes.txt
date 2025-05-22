@@ -1,0 +1,574 @@
+1. Unlike most other languages, Python uses indentations, not "{}" for function
+
+2. You do not need to tell Python that the following variable is going to be 
+    assigned to a string, it does it by itself, 
+    unlike most other programming languages
+
+3. You do not need to start with a class when first creating a code in Python, 
+    you just write it.
+
+4. Although Python can be used in an Object oriented way, it is more of an
+    object-based program.
+
+5. Since -everything- is an object in Python(Py), any "thing" can be assigned to
+    any variable, and variables can be assigned anything(ints, str, function)
+
+6. The START, STOP, STEP
+    the START value lets you control WHERE the range begins
+    the STOP value lets you control WHEN the range ends
+    the STEP value lets you control HOW the range ends
+        * These can be used to slice lists, which is -non-destrucitve-, 
+        meaning it doesn't alter the original list 
+        [see how to use them at notes/pybook_notes/data_structures/list.notes.py]
+
+7. Dictionaries:
+    1. You can avoid a KeyError by ensuring every key in your dictionary has 
+    value(s) associated with it before you try to access it. Although -in- and 
+    -not in- could help, the established technique is to 
+    use the setdefault method instead.
+
+    2. To search for a value in a dictionary, do this:
+        dict ['the word you are searching goes here']
+        What about searching for a value in a dictionary thats in a dictionary? 
+        Here it is:
+            dict ['other dict'] ['word you are searching for']
+
+8. Sets:
+
+
+
+9. Tuples:
+    Why use tuples?
+        When making high end programs, it isn't ideal to use mutable(changeable) 
+        data, like a list. A TUPLE, on the other hand, isn't mutable and 
+        can be used so it can be more secure.
+
+10. Methods:
+    1. pprint = short for "pretty print" which prints out something 
+    that looks better
+    How to use it? Heres how:
+        import pprint
+        pprint.pprint(value)
+
+11. Classes:
+    1. A class lets you bundle behavior and state together in an object
+        When you hear behavior,think functions
+        When you hear state, thing variables
+        These 2 are the main objects in Classes
+    
+    2. Classes have methods and attributes
+        In Python, you define a class behavior by creating a method
+    
+    3. The method code is shared, but the attribute isn't. (Key point)
+        Think of the factory being the class
+        And the instantiated objects, which are the packages to contain the
+            shared code and their own data.
+    4. Structure
+        We know that a method is a function defined within a class. If you
+        go to notes/pybook_notes/misc-books.py, you will see an example of a 
+        method from CountFromBy (class) being invoked, the -increase- method.
+            Here's a more detailed structure of the increase method:
+
+                example.increase()
+                   ^   ^    ^
+                object |  Name of method
+                 Spot the dot.
+            Here's another method:
+
+                CountFromBy.increase(example)
+                     ^          ^       ^
+                  The class   Method   The object (to increase)
+            These 2 methods work the same, but most do example.increase,
+            Which is just easier to write overall. 
+    
+    5. Method Invocation
+        1. It's okay for methods to take more than one arguement,
+           but the first arguement always has to exist in order
+           to take the object as an arguement.
+        
+        2. What python does
+            What you write:
+                
+                example.increase()
+            
+            What python executes:
+                
+                CountFromBy.increase(example)
+
+            You're lucky that python can simplify the code for you, which is 
+            why it is such a good programming language.
+    
+    6. Self 
+        Objects in classes share the class's method code(behavior) with every 
+        other object created from the same class, but maintains it's -own copy-
+        of any attribute data (state). It does this by associating the attribute
+        values with the object--that is, with -self-.
+
+        With that in mind, something like this would be -incorrect-:
+
+            class CountFromBy:
+                def increase(self) -> None:
+                    val += incr # This part here is incorrect. all it does is
+                                    increment the current value of -val- by
+                                    the current value of -incr-.
+            
+            The CORRECTED code would look like this:
+
+                self.val += self.incr # Just adding "self." will change how the
+                                        code behaves.
+    
+    7. __init__ (dunder init)
+        These are usually used in a constructor to assign values to objects
+        
+        If you provide a method in your class with a -def- line like this one:
+        
+        def __init(self):
+
+        The interpreter will call your __init__ method every time you create
+        a new object from your class.
+
+    8. __repr__ (dunder repr)
+        If you don't tell the interpreter how you want to represent your
+        objects, the interpreter -has- to do something, so it does something
+        like this:
+
+        'Oxhj8678hj' # each object has a number like this and it will print if you
+                      don't tell it what to do
+        
+        Thankfully, you override this default behavior by coding your own
+        __repr__ method.
+
+        You can control -what- happens for -your- objects by writing a
+        __repr__ method for you class. 
+
+12. Context management
+    1. Kind of continuing off classes but context management is more for webapps, even 
+        though we use classes here.
+    
+    2. 2 new 'magic methods'
+        Recently we introduced 2 magic methods, __init__ and __repr__. Well
+        we are adding 2 new ones.
+        __enter__ (performs setup)
+        and
+        __exit__ (does teardown)
+
+        1. __enter__ (dunder enter)
+            When an object is used with a -with- statement, the interpreter invokes
+            the object's __enter__ method before the with statements suite starts.
+            The protocol further states that 'dunder enter' can (but doesn't have to)
+            return a value to the with statement. 
+        
+        2. __exit__ (dunder exit)
+            As soon as the with statement's suite ends, the interpreter -always- invokes
+            the object's __exit__ method. This occurs -after- the with's suite 
+            terminates, and it provides an opportunity for you to perform any required
+            teardown.
+        
+        3. Webapp sessions
+            1. You need 2 things to have the webapp secure:
+
+                1. A way to store variables without resorting to using globals
+
+                2. A way to keep one webapp user's data from interferring with another's
+
+    3. Function decorators
+        1. Decorators are basically just functions, and you may have used them before
+            in your webapp. The @app.route is a decorator.
+        
+        2. Use * to accept an arbitrary list of arguements
+            Python provides a special notation that allows you to specify that a function
+            can take any number of arguements (where any means zero or more). The
+            notation uses the * character to represent -any number-, and is combined 
+            with an arguement name (most use "args") to specify that a function can 
+            accept arbitrary list of arguements (even though its a tuple) 
+
+            Example:
+
+            def myfunc(*args):
+                for a in args:
+                    print(a, end=' ')
+                if args:
+                    print()
+        
+        3. Use ** to accept arbitrary keyword arguements
+            In addition to the * notation, Python also provides **, which expands to
+            a collection of keyword arguements. Where * uses -args- as its variable
+            name, ** uses -kwargs-, which is short for "keyword arguements". 
+             
+             Example:
+
+             def myfunc2(**kwargs):
+                for k, v in kwargs.items():
+                    print(k, v, sep='->', end=' ')
+                if kwargs:
+                    print()
+        
+13. Webapp management
+    1. Errors
+
+        1. These are the following errors you may encounter when testing your webapp:
+
+            1. Your database connection fails
+                Errors occur when an external system your code relies on is unavailable.
+                And they may generate exceptions
+
+            2. Your application is subjected to an attack
+                There are 2 of the biggest types of attacks; SQL injection (SQLi), and
+                Cross-site scripting (XSS). 
+            
+            3. Your code takes a long time to execute.
+                If a code takes a long time to execute, you have to consider the impact
+                on your user's experience. 
+
+            4. Your function call fails
+                It's not just external systems that generate exceptions, your code can,
+                too. When this happens, you have to be ready to spot the exception, then  
+                recover as needed.
+
+        2. Always try to exceute Error-Prone code
+            When something goes wrong in your code, python raises a runtime exception.
+            You saw the 4 issues, where exceptions can be raised under many different
+            circumstances. In fact, the interpreter comes with a whole host of built-in
+            exception types, of which RuntimeError is only one example.
+
+            To spot (and hopefully recover) a runtime exception, try Python's -try-
+            statement, which helps you manage exceptions as they occur at runtime.
+
+            1. Catching an error isn't enough
+                When a runtime error occurs, an exception is raised. If you ignore a 
+                raised exception, it is referred to as -uncaught-, and the interpreter
+                will terminate your code. They can be caught with the -try- statement.
+                (Note that it isn't enough to just catch runtime errors, you also have
+                to decide what you are going to do next)
+
+                the -except- statement lets you decide what you are going to do.
+
+                Quick summary of what each do:
+
+                    1. -try- lets you react whenever the excecution of your code 
+                        results in a raised exception. To protec code with -try-, put
+                        the code within try's suite. If any exception occurs, the code
+                        in try's suite terminates, and then try's suite will run.
+                    
+                    2. except's suite is simply where you to define what you want to do.
+
+        3. What went wrong?
+            Trying to see what went wrong is tricky. That's because you can eiher see what type
+            of error it was or what was the error. Both are needed.
+
+            1. "sys"
+                The standard library comes with a module called sys that provides access to the
+                -internals- (a set of variables and functions available at runtime)
+
+            2. exc_info
+                one of these functions are "exc_info", which provides information on the
+                exception currently being handled.
+                exc_info returns a three valued tuple where the first value indicates the
+                exceptions TYPE, the second details exceptions VALUE, and the third contains
+                a traceback OBJECT that povides access to the traceback message (you need it).
+                when there is no currently available exception, it returns a null value for each
+                of the three (None, None, None). 
+
+                here's an example of using sys and exc_info at the python shell:
+
+                >>> import sys
+                >>> 
+                >>> try:
+                ...     1/0
+                ... except:
+                ...     err = sys.exc_info()
+                ...     for e in err:
+                ...             print(e)
+                ... 
+                <class 'ZeroDivisionError'> 
+                division by zero
+                <traceback object at 0x7e4a7367ff80>
+                >>> 
+                Focus on this:
+                <class 'ZeroDivisionError'> 
+                division by zero
+                <traceback object at 0x7e4a7367ff80>
+                You can see the 3 values from exc_info,  <class 'ZeroDivisionError'>  is the 
+                exceptions TYPE, division by zero is the exceptions VALUE, and 
+                <traceback object at 0x7e4a7367ff80> is the tracebacks OBJECT.
+
+                Also remember that it DOES make a difference where you put exc_info in your code!
+            
+            3. Handling exceptions "silently"
+                What it means is that when you are running your webapp and get an error,
+                you don't want your users to see that error. So you can "silence" it. 
+                This means that if there is an error, it doesn't show the error for the users.
+
+                Here's an example of how to put the silencing in your code:
+
+                        try:
+                            log_request(request, log)
+                        except Exception as err:
+                            print('*****Logging failed with this error:', str(err))
+                                                                             ^
+                                                                        this error is only 
+                                                                        shown for the admin.
+                                                                        Users see nothing.
+                
+                        So what you will see is something like this:
+
+                        *****Logging failed with this error: 1045 (28000): Access denied for 
+                        user 'goofyfrog' @ 'localhost' (using password: YES)
+
+                        There are other errors that you might see in your webapp, but this 
+                        just an example. 
+                
+        4. Creating custom errors
+            Creating custom errors can be helpful, if you want the error to look less
+            intimidating. Just decide on a name, then define an empty class that inherits
+            from Python's built-in Exception class. 
+
+                    here's an example at the Python shell:
+                                >>> 
+                                >>> 
+                                >>> class ConnectionError (Exception):
+                                ...     pass
+                                ... 
+                                >>> 
+                                >>> raise ConnectionError ('Cannot connect.... time to panic?')
+                                Traceback (most recent call last):
+                                File "<stdin>", line 1, in <module>
+                                ConnectionError: Cannot connect.... is it time to panic?
+                                >>> 
+                                >>> 
+                                >>> try:
+                                ...     raise ConnectionError('Whoops!')
+                                ... except ConnectionError as err:
+                                ...     print('Got:', str(err))
+                                ... 
+                                Got: Whoops!
+                                >>> 
+                                >>> 
+                    
+                    Let's break it down; First, you create a class with 'pass'
+                    Then you raise the exception followed by ('') and in those quotes
+                    you put the text you want to show up if that error happens.
+                    You could also do a try and except block, by raising it and naming it
+                    like before, then doing the except block.
+    2. Waiting: what to do (Threading)
+        Your code might take a while to run, and it could be annoying for the users because
+        who would want to wait 30 seconds for a code to do something?
+
+        1. The best case 
+            The best case for when you are trying to write code that doesn't have much potential
+            to wait is:
+
+                    Waiting for a write is different from waiting for a read.
+        
+        2. The -threading- library
+            1. Basics
+                When it comes to arranging your code to run concurrently, Python has a few options.
+                Most are third-party modules, but the standard library comes with built-in
+                modules that can help here.
+
+                One of the most known is the threading library, whcih provides high-level interface
+                to the threading implementation.
+
+                You can add threading like this:
+
+                    from threading import Thread
+            
+            2. Create threads
+
+                to create a new Thread object, assigning the name of the function you want the
+                thread to excecute to a named argument called -target-, and providing any
+                arguements as a tuple to another named argument called -args-. The created 
+                Thread object is then assigned to a variable of your choosing.
+
+                Example:
+
+                    Let's say that function called find_frog, which takes 3 arguments, and find
+                    the letters f, r, o, g for each arguement. The code that invokes find_frog
+                    has assigned the three values to variables called tree_frog, big_frog, and
+                    smol_frog. Here is how find_frog is invoked normally:
+
+                        find_frog(tree_frog, big_frog, smol_frog)
+                    
+                    If find_frog takes 30 seconds to do what it has to, the calling code blocks
+                    and waits 30 seconds before doing anything else.
+
+                         ^         ^
+                    Well that doesn't sound good. 
+
+                    It isn't the end of the world for you, but for your user to wait 30 seconds
+                    for each run sounds awful and the user might think something is wrong.
+
+                    If your application can continue to run while find_frog goes about it's 
+                    business, you can create a thread to run find_frog concurrenty. 
+
+                    Example:
+
+                        t = Thread(target=find_frog, args=(tree_frog, big_frog, smol_frog))
+                               ^               ^                         ^
+                         create thread    This is the function   And these are it's arguements
+                    
+14. Advanced Iteration
+
+        1. CSV
+            CSV stands for 'Comma Separated Value(s)' and what it does is it takes a File
+            you want to read, (example: os.chdir('/Users/BigFrog/frog_files.csv')) and then open
+            the file with:
+
+            with open('frog_files.csv) as data:
+                for line in csv.reader(data):
+                        print(line)
+            
+            The file will open with this and display the contents.
+
+            You could also use DictReader to display your contents in a dictionary:
+
+            with open('frog_files.csv') as data:
+                for line in csv.DictReader(data):
+                        print(line)
+            
+            1. Managing the format (Titlecase)
+                
+                In CSV, a lot of people want to change the format of how the csv looks. It mostly
+                comes completely uppercase (UPPERCASE), and most don't want it to be like that.
+                There is another format, Titlecase (Title Case Here). Note that this will NOT 
+                change the way the code runs, just how it looks. 
+
+                Here's a scenario at the python shell to show you how to change something to
+                Titlecase:
+
+                >>> s = "IM GONNA YELL"
+                >>> print(s)
+                IM GONNA YELL
+                >>> t = s.title()
+                >>> print(t)
+                Im Gonna Yell
+                >>> 
+
+                As you see we origonally put it as UPPERCASE but then switched it with this line:
+
+                t = s.title() # the 'title()' is what changes it to Titlecase.
+            
+            2. Comprehensions:
+
+                Python's built in -comprehension- feature lets you rework multiple lines into 
+                one.
+
+                Here's an example:
+
+                destinations = []
+
+                for dest in flights.values():
+                    destination.append(dest.title())
+
+                To comprehend it, start by making a new, empty list:
+
+                more_dests = []
+
+                Specify how the existing data is to be iterated over using the familiar -for-
+                notation, and place this code within new list's square brackets ([]):
+
+                more_dests = [for dest in flights.values()]
+
+                To complete the comprehension, specify the transformation to be applied to the
+                data, and put this transformation before the for keyword:
+
+                more_dests = [dest.title() for dest in flights.values()]
+                    ^               ^                 ^
+                variable          function         loop
+
+                1. Set comprehension (setcomp)
+                    setcomp allows you to create a new set (notes/pybook_notes/data_structures/set.notes.py) in one line of code, using a construct that's very similar
+                    to the list comprehension syntax.
+
+                    Here is an example:
+
+                        original code:
+
+                            vowels = {'a', 'e', 'i', 'o', 'u'}
+                            message = "The train to frog mountain is departing"
+
+                            found = set()
+                            for v in vowels:
+                                if v in message:
+                                    found.add(v)
+
+                2. How to spot a comprehension
+
+                    Here's a general rule to finding them:
+
+                        If you spot code surrounded by [ and ], then you are looking at a list comprehension.
+                    
+                    Also make sure to remember this:
+
+                    [..code..] <- list comprehension
+                    {..code..} <- either a set or dictionary comprehension
+                    (..code..) <- Special case  
+
+                    Also before you ask, tuple comprehensions don't exist.
+
+                
+                3. Generators
+
+                    If you see something that looks like a listcomp but is surrounded by parentheses,
+                    It's a -generator-.
+
+                    Generators produce data items one at a time
+
+                        Unlike a listcomp, which must conclude before any other code can execute, a 
+                        generator releases data as soon as it is produced by the generator's code.
+                    
+                    Here is a generator:
+
+                        for i in (x*3 for x in [1, 2, 3, 4, 5])
+                                  ^        ^                ^
+                                This is the generator (from "(" to ")")
+                    
+                    Just to not get confused, this is a list comp:
+
+                                 more_dests = [dest.title() for dest in flights.values()]
+                    
+
+                4. Using a listcomp to precess URLs
+                    
+                    Here's some code at the >>> prompt that uses the request library (which lets you
+                    programmatically interact with the web)
+
+                    >>> import requests
+                    >>> 
+                    >>> urls = ('http://ikcodeii.pythonanywhere.com', 'http://youtube.com')
+                    >>> 
+                    >>> for resp in [requests.get(url) for url in urls]:
+                    ...     print(len(resp.content), '->', resp.status_code, '->', resp.url)
+                    ... 
+
+                    3600 -> 200 -> http://ikcodeii.pythonanywhere.com/
+                    579109 -> 200 -> https://www.youtube.com/
+                    >>> 
+
+
+                    When the results appear, they appear all at once. This is because the listcomp works
+                    through each of the URLs in the urls tuple before making any results available to the 
+                    for loop. Outcome: you have to wait for your output. 
+
+                5. Using a generator to process URLs 
+                    
+                    We are going to do the same 'import' and the urls tuple, but we are going to change the 
+                    listcomp to a generator 
+
+                    >>> for resp in (requests.get(url) for url in urls):
+                            print(len(resp.content), '->', resp.status_code, '->', resp.url)
+                    
+                    Now after making the loop, the first result appears, then moments later, the second one 
+                    appears, and so on until there is none left. 
+
+                    What just happened?
+                        This is different from the listcomp, since 
+                        the listcomp does everything first then shows the output. A generator releases the output
+                       of one result right when it is finished with it, so it doesn't wait for all of the results
+                        to finish before releasing it like a listcomp.
+                
+                6. Yields
+
+                    The yield keyword was added to Python to support the creation of generator functions, and you 
+                    can use it anywhere a return is used. When you do, your function becomes a generator function 
+                    that can be "called" from any iterator. 
