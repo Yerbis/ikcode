@@ -3463,3 +3463,9 @@ IKcode website: https://ikcodeii.pythonanywhere.com
             window = MainWindow()
             window.show()
             sys.exit(app.exec_())
+
+14. THE END
+
+    This is the end of Pyvideo notes, to see the last
+    final project, go to learning_projs/ikweather.py, 
+    which is a weather API app.

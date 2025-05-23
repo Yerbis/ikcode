@@ -1,23 +1,29 @@
-from ikcode_gtconnect import runGUI, CheckInfo, Help
+from ikcode_devtools import runGUI, CheckInfo, getVersion
+
+
 
 @CheckInfo
-def run_gui():
-    import time
-    print("Running GUI test...")
-    time.sleep(2)
-    print("GUI test completed.")
+def bigtest():
+    print("big idea")
+    import time 
+    # ahh
+
     e = 2
+    b = 3
 
-    class Test:
-        def __init__(self):
-            self.name = "Test"
-            self.value = 0
+    class Erats:
+        e = "do"
 
+@getVersion
+def tinytest():
+    print("big idea")
+    import time 
+    # ahh
 
+    e = 2
+    b = 3
 
-    runGUI()
+    class Erats:
+        e = "do"
 
-
-
-print(Help())
-
+runGUI()
